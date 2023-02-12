@@ -1,0 +1,584 @@
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2" location="g15_magneto_512ms_20140301_20140301.nc">
+  <dimension name="record" length="165544" isUnlimited="true" />
+  <dimension name="orbit" length="1" />
+  <attribute name="conventions" value="GOES Space Weather" />
+  <attribute name="title" value="GOES Magnetometer" />
+  <attribute name="institution" value="NOAA" />
+  <attribute name="source" value="Satellite Insitu Observations" />
+  <attribute name="satellite_id" value="GOES-15" />
+  <attribute name="instrument" value="Magnetometer" />
+  <attribute name="process-type" value="Full resolution" />
+  <attribute name="process-level" value="level 1b" />
+  <attribute name="sample-time" value="512" />
+  <attribute name="sample-unit" value="milliseconds" />
+  <attribute name="creation_date" value="2014-03-02 09:04:04.343 UTC" />
+  <attribute name="start_date" value="2014-03-01 00:00:00.463 UTC" />
+  <attribute name="end_date" value="2014-03-01 23:59:59.967 UTC" />
+  <attribute name="records_maximum" value="168750" />
+  <attribute name="records_present" value="165544" />
+  <attribute name="records_missing" value="3206" />
+  <attribute name="originating_agency" value="DOC/NOAA/NCEP/NWS/SWPC" />
+  <attribute name="archiving_agency" value="DOC/NOAA/NESDIS/NGDC" />
+  <variable name="time_tag_orbit" shape="orbit" type="double">
+    <attribute name="long_name" value="Date and time for each west_longitude and inclination pair" />
+    <attribute name="units" value="milliseconds since 1970-01-01 00:00:00.0 UTC" />
+    <attribute name="calendar" value="gregorian" />
+  </variable>
+  <variable name="west_longitude" shape="orbit" type="float">
+    <attribute name="description" value="West longitude of satellite sub-orbit point at the given date and time." />
+    <attribute name="long_label" value="West longitude" />
+    <attribute name="short_label" value="w long" />
+    <attribute name="plot_label" value="West longitude" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="degrees" />
+    <attribute name="format" value="F5.1" />
+    <attribute name="nominal_min" value="70" />
+    <attribute name="nominal_max" value="140" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="inclination" shape="orbit" type="float">
+    <attribute name="description" value="Inclination -- the angle between the plane of the orbit and the equatorial plane measured counter-clockwise from true East." />
+    <attribute name="long_label" value="inclination" />
+    <attribute name="short_label" value="incl" />
+    <attribute name="plot_label" value="inclination" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="degrees" />
+    <attribute name="format" value="F6.3" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="1" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="time_tag" shape="record" type="double">
+    <attribute name="long_name" value="Date and time for each observation" />
+    <attribute name="units" value="milliseconds since 1970-01-01 00:00:00.0 UTC" />
+    <attribute name="calendar" value="gregorian" />
+  </variable>
+  <variable name="BX_1_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="BX_1" shape="record" type="float">
+    <attribute name="description" value="Average of the X-component of the magnetic field in sensor coordinates measured by magnetometer-1" />
+    <attribute name="long_label" value="bx-1 flux density" />
+    <attribute name="short_label" value="bx1 fx" />
+    <attribute name="plot_label" value="bx-1" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-200" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="BY_1_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="BY_1" shape="record" type="float">
+    <attribute name="description" value="Average of the Y-component of the magnetic field in sensor coordinates measured by magnetometer-1" />
+    <attribute name="long_label" value="by-1 flux density" />
+    <attribute name="short_label" value="by1 fx" />
+    <attribute name="plot_label" value="by-1" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-200" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="BZ_1_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="BZ_1" shape="record" type="float">
+    <attribute name="description" value="Average of the Z-component of the magnetic field in sensor coordinates measured by magnetometer-1" />
+    <attribute name="long_label" value="bz-1 flux density" />
+    <attribute name="short_label" value="bz1 fx" />
+    <attribute name="plot_label" value="bz-1" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-200" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="BXSC_1_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="BXSC_1" shape="record" type="float">
+    <attribute name="description" value=" Average of the X-component of the magnetic field in spacecraft coordinates measured by magnetometer-1" />
+    <attribute name="long_label" value="bx-sc-1 flux density" />
+    <attribute name="short_label" value="bxsc1 fx" />
+    <attribute name="plot_label" value="bx-sc-1" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-200" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="BYSC_1_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="BYSC_1" shape="record" type="float">
+    <attribute name="description" value=" Average of the Y-component of the magnetic field in spacecraft coordinates measured by magnetometer-1" />
+    <attribute name="long_label" value="by-sc-1 flux density" />
+    <attribute name="short_label" value="bysc1 fx" />
+    <attribute name="plot_label" value="by-sc-1" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-200" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="BZSC_1_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="BZSC_1" shape="record" type="float">
+    <attribute name="description" value=" Average of the Z-component of the magnetic field in spacecraft coordinates measured by magnetometer-1" />
+    <attribute name="long_label" value="bz-sc-1 flux density" />
+    <attribute name="short_label" value="bzsc1 fx" />
+    <attribute name="plot_label" value="bz-sc-1" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-200" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="BTSC_1_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="BTSC_1" shape="record" type="float">
+    <attribute name="description" value="Average total magnetic field measured by magnetometer-1 " />
+    <attribute name="long_label" value="bt-sc-1 flux density" />
+    <attribute name="short_label" value="btsc1 fx" />
+    <attribute name="plot_label" value="bt-sc-1" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-50" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="BX_2_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="BX_2" shape="record" type="float">
+    <attribute name="description" value="Average of the X-component of the magnetic field in sensor coordinates measured by magnetometer-2" />
+    <attribute name="long_label" value="bx-2 flux density" />
+    <attribute name="short_label" value="bx2 fx" />
+    <attribute name="plot_label" value="bx-2" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-200" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="BY_2_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="BY_2" shape="record" type="float">
+    <attribute name="description" value="Average of the Y-component of the magnetic field in sensor coordinates measured by magnetometer-2" />
+    <attribute name="long_label" value="by-2 flux density" />
+    <attribute name="short_label" value="by2 fx" />
+    <attribute name="plot_label" value="by-2" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-200" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="BZ_2_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="BZ_2" shape="record" type="float">
+    <attribute name="description" value="Average of the Z-component of the magnetic field in sensor coordinates measured by magnetometer-2" />
+    <attribute name="long_label" value="bz-2 flux density" />
+    <attribute name="short_label" value="bz2 fx" />
+    <attribute name="plot_label" value="bz-2" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-200" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="BXSC_2_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="BXSC_2" shape="record" type="float">
+    <attribute name="description" value=" Average of the X-component of the magnetic field in spacecraft coordinates measured by magnetometer-2" />
+    <attribute name="long_label" value="bx-sc-2 flux density" />
+    <attribute name="short_label" value="bxsc2 fx" />
+    <attribute name="plot_label" value="bx-sc-2" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-200" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="BYSC_2_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="BYSC_2" shape="record" type="float">
+    <attribute name="description" value=" Average of the Y-component of the magnetic field in spacecraft coordinates measured by magnetometer-2" />
+    <attribute name="long_label" value="by-sc-2 flux density" />
+    <attribute name="short_label" value="bysc2 fx" />
+    <attribute name="plot_label" value="by-sc-2" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-200" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="BZSC_2_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="BZSC_2" shape="record" type="float">
+    <attribute name="description" value=" Average of the Z-component of the magnetic field in spacecraft coordinates measured by magnetometer-2" />
+    <attribute name="long_label" value="bz-sc-2 flux density" />
+    <attribute name="short_label" value="bzsc2 fx" />
+    <attribute name="plot_label" value="bz-sc-2" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-200" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="BTSC_2_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="BTSC_2" shape="record" type="float">
+    <attribute name="description" value="Average total magnetic field measured by magnetometer-2 " />
+    <attribute name="long_label" value="bt-sc-2 flux density" />
+    <attribute name="short_label" value="btsc2 fx" />
+    <attribute name="plot_label" value="bt-sc-2" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-50" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="HP_1_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="HP_1" shape="record" type="float">
+    <attribute name="description" value="Average magnetic field measured by magnetometer-1 in the direction perpendicular to orbit plane; positive Northward (parallel to Earth's rotation axis for 0 deg inclination orbit) " />
+    <attribute name="long_label" value="Hp-1 flux density" />
+    <attribute name="short_label" value="hp1 fx" />
+    <attribute name="plot_label" value="Hp-1 " />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-200" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="HE_1_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="HE_1" shape="record" type="float">
+    <attribute name="description" value="Average magnetic field measured by magnetometer-1 in the Earthward direction; perpendicular to HP" />
+    <attribute name="long_label" value="He-1 flux density" />
+    <attribute name="short_label" value="he1 fx" />
+    <attribute name="plot_label" value="He-1 " />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-200" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="HN_1_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="HN_1" shape="record" type="float">
+    <attribute name="description" value="Average magnetic field measured by magnetometer-1 in the Eastward direction; perpendicular to HP and HE" />
+    <attribute name="long_label" value="Hn-1 flux density" />
+    <attribute name="short_label" value="hn1 fx" />
+    <attribute name="plot_label" value="Hn-1 " />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-200" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="HT_1_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="HT_1" shape="record" type="float">
+    <attribute name="description" value="Average total magnetic field measured by magnetometer-1 " />
+    <attribute name="long_label" value="Ht-1 flux density" />
+    <attribute name="short_label" value="ht1 fx" />
+    <attribute name="plot_label" value="Ht-1 " />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-50" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="HP_2_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="HP_2" shape="record" type="float">
+    <attribute name="description" value="Average magnetic field measured by magnetometer-2  perpendicular to orbit plane; positive Northward (parallel to Earth's rotation axis for 0 deg inclination orbit) " />
+    <attribute name="long_label" value="Hp-2 flux density" />
+    <attribute name="short_label" value="hp2 fx" />
+    <attribute name="plot_label" value="Hp-2 " />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-200" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="HE_2_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="HE_2" shape="record" type="float">
+    <attribute name="description" value="Average magnetic field measured by magnetometer-2 in the Earthward direction; perpendicular to HP" />
+    <attribute name="long_label" value="He-2 flux density" />
+    <attribute name="short_label" value="he2 fx" />
+    <attribute name="plot_label" value="He-2 " />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-200" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="HN_2_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="HN_2" shape="record" type="float">
+    <attribute name="description" value="Average magnetic field measured by magnetometer-2 in the Eastward direction; perpendicular to HP and HE" />
+    <attribute name="long_label" value="Hn-2 flux density" />
+    <attribute name="short_label" value="hn2 fx" />
+    <attribute name="plot_label" value="Hn-2 " />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-200" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+  <variable name="HT_2_QUAL_FLAG" shape="record" type="float">
+    <attribute name="description" value="Quality flag non-zero value indicates data quality issue." />
+    <attribute name="long_label" value="quality flag" />
+    <attribute name="short_label" value="qf" />
+    <attribute name="plot_label" value="" />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="qf" />
+    <attribute name="format" value="I" />
+    <attribute name="nominal_min" value="0" />
+    <attribute name="nominal_max" value="4294967295" />
+    <attribute name="missing_value" value="99999" />
+  </variable>
+  <variable name="HT_2" shape="record" type="float">
+    <attribute name="description" value="Average total magnetic field measured by magnetometer-2 " />
+    <attribute name="long_label" value="Ht-2 flux density" />
+    <attribute name="short_label" value="ht2 fx" />
+    <attribute name="plot_label" value="Ht-2 " />
+    <attribute name="lin_log" value="lin" />
+    <attribute name="units" value="nT" />
+    <attribute name="format" value="F7.2" />
+    <attribute name="nominal_min" value="-50" />
+    <attribute name="nominal_max" value="200" />
+    <attribute name="missing_value" value="-99999" />
+  </variable>
+</netcdf>

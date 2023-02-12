@@ -1,0 +1,378 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+ <html>
+ 	<head>
+ 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ 		<title>TSDS Catalog Creator</title>
+		<link rel="stylesheet" href="deps/codemirror-2.3/lib/codemirror.css">		
+ 		<link rel="stylesheet" type="text/css" href="asset/main.css">
+ 		<link rel="icon" type="image/ico" href="asset/favicon.ico"/>
+
+ 		<script src="deps/1.7.2/jquery.min.js"></script>
+ 		<script src="deps/autosize/jquery.autosize-min.js"></script>
+ 		<script src="deps/jquery.scrollTo-min.js"></script>
+		<script src="deps/jquery.tmpl.js"></script>
+		<script src="deps/jquery.imagesloaded.js"></script>
+		<script src="deps/jquery.ba-hashchange-1.3.js"></script>
+		<script src="deps/jquery.parsequerystring.js"></script>
+
+ 		<script src="deps/strftime.js"></script>
+ 		<script src="deps/sprintf-0.7-beta1.js"></script>	
+ 		<script src="deps/date.js"></script>
+ 		<script src="lib/expandtemplate.js"></script>  		
+
+		<script src="deps/codemirror-2.3/lib/codemirror.js"></script>
+		<script src="deps/codemirror-2.3/mode/xml/xml.js"></script>
+		<script src="deps/codemirror-2.3/lib/util/formatting.js"></script>
+
+ 		<script src="asset/checkproxy.js"></script>
+ 		<script src="asset/tsdsgen.js"></script>
+ 		<script src="asset/createcatalog.js"></script>
+
+		<script type="text/javascript">Presets = {};</script>
+
+ 		<script src="presets/SuperMAG.js"></script>
+
+<!-- 
+ 		<script src="presets/NGDC_GOES15_MAGED.js"></script>
+
+ 		<script src="presets/NGDC_GOES_5-11.js"></script>
+ 		<script src="catalogs/intermagnet/INTERMAGNET_PT1M.json"></script>
+ 		<script src="presets/INTERMAGNET_PT1M.js"></script>
+ 		<script src="presets/USGS_RT_PT1M.js"></script>
+ 		<script src="presets/USGS_RT_PT1S.js"></script>
+
+ 		<script src="catalogs/sscweb/SSCWeb.json"></script>
+ 		<script src="presets/SSCWeb.js"></script>
+ 		<script src="presets/SWPC_AK_2DayFile.js"></script>
+ 		<script src="presets/SWPC_AK.js"></script>
+ 		<script src="presets/Kyoto_RT_Dst_PT1H.js"></script>
+ 		<script src="presets/USGS_RT_Dst_PT1H.js"></script>
+ 		<script src="presets/USGS_RT_Dst_PT1M.js"></script>
+ 		<script src="presets/NGDC_GOES13_SEM_XRS.js"></script>
+ 		<script src="presets/NSSDC_ISIS-1.js"></script>
+ 		<script src="presets/NSSDC_ISIS-2.js"></script>
+ 		<script src="presets/CCMC_BATSRUS_PT4M.js"></script>
+		<script src="presets/Autoplot_Linkcheck.js"></script>
+ 		<script src="presets/ViRBO_TSX-5_EPHX.js"></script>
+ 		<script src="presets/NSSDC_DE2_MAG.js"></script>
+ 		<script src="presets/Template.js"></script>
+-->
+ 	</head>
+	<script>
+		var AutoplotServlet  = "http://autoplot.org/plot/SimpleServlet?";
+		//var AutoplotServlet  = "http://plasma.gmu.edu:8082/AutoplotServlet/SimpleServlet?";
+		var plotoptions      = "width=500&height=100&font=sans-8&format=image%2Fpng&column=10em%2C100%25-3em&row=1em%2C100%25-4em&renderType=&color=%230000ff&fillColor=%23aaaaff&foregroundColor=%23ffffff&backgroundColor=%23000000";
+
+		var DataCache        = "http://datacache.org/dc/sync";
+		// This won't work for localhost. node.js gives Error: getaddrinfo ENOENT.
+		//var DataCache        = "http://localhost:8000/sync";
+		//var DataCache        = "http://127.0.0.1:8000/sync";
+
+		var URLTemplateExpander = "";
+		
+		var Proxy            = "";
+		var Proxy            = "http://localhost:8888/proxy?url=";
+		var Proxy            = "http://127.0.0.1:8002/proxy?url=";
+		//var Proxy            = "asset/head.php?url=";
+		
+		function setpresets(preset) {
+			//console.log(preset)
+			for (var key in preset) {
+				//console.log(key + ": " + preset[key]);
+				//if (key !== "Datasets") {
+					//console.log(preset[key])
+					$('#'+key).val(preset[key]);
+				//}
+			}
+		}
+
+		function threddsTry() {
+			data = "catalog=" + escape($('#threddscatalog').val());
+			console.log("Trying catalog");
+			$.ajax({
+				type: 'POST',
+				data: data,
+				url: 'http://tsds.org/get/',
+				success: function () {
+						console.log("Opening" + "http://tsds.org/get/#catalog="+location.hash.replace(/^#/,""));
+						window.open("http://tsds.org/get/#catalog="+location.hash.replace(/^#/,""));
+						//$("body").append("<iframe id='iframe' height='100%'/>")
+						//$("#iframe").attr("src","http://tsds.org/tsdsdev/tsdsfe/gui.htm#catalog="+location.hash.replace(/^#/,""));
+						//$.scrollTo('#iframe');
+						},
+				error: function () {console.log("Proxy error");}});
+		}
+		
+		function autoFormat(editor) {
+		    var totalLines = editor.lineCount();
+		    var totalChars = editor.getTextArea().value.length;
+		    editor.autoFormatRange({line:0, ch:0}, {line:totalLines, ch:totalChars});
+		}
+
+		$(document).ready(function(){
+
+			$("#DataColumns").val().split(/\(|\)/g).forEach(function (el,idx,arr) {
+				el = el.replace(/^,|,$/,"");
+				//console.log(idx + " " + el)
+			});
+
+			$(window).hashchange(function() {
+				//console.log("Hash has changed");
+				//$("#presetselect").val(location.hash.replace(/^#/,'').replace(/^\//,"")).trigger('change')
+			});
+
+			qs = $.parseQueryString();
+			console.log("Query String: ");
+			console.log(qs);
+			
+			var qscatalog = false;
+			if (typeof(qs["CatalogID"]) !== "undefined") {
+				qscatalog = true;
+				console.log("--")
+				console.log(qs);
+				Presets[qs["CatalogID"]] = {};
+				Presets[qs["CatalogID"]].CatalogID = qs["CatalogID"];
+				Presets[qs["CatalogID"]].CatalogName = qs["CatalogID"];
+				console.log(Presets)
+			} else {
+				$("#presetselect").val(location.hash.replace(/^#/,'').replace(/^\//,"")).trigger('change');
+			}
+					
+			$("#presets").append("<select id='presetselect' style='height:2.0em;width:100%'/>");
+			$("#presetselect").append("<option id=''>-Examples-</option>");
+			first = true;
+			for (var i in Presets) {
+				var o = $("<option/>").attr("id",i).html(i);
+				$("#presetselect").append(o);
+			}
+			$('#presetselect').find('option:eq(1)').attr('selected', true).trigger("change");
+						
+			if (location.hash !== "" && !qscatalog) {
+				console.log("Setting hash to id.")
+				var hash = location.hash;
+				var presetid = hash.replace(/^#/,'').replace(/^\//,"");
+				$("#presetselect").val(presetid).trigger("change");	
+			}
+			if (qscatalog) {
+				presetid = qs["CatalogID"];
+				$("#presetselect").val(presetid).trigger("change");	
+			}
+
+			$("#presetselect").change(function () {
+
+				var id = $("#presetselect").val();
+				if (!qscatalog) {
+					location.hash=id;
+				}
+
+				// Needed for autosize to work after change.
+				// Otherwise content does not change (at least in Chrome).
+				$("#Datasets").after("<textarea class='required enter' id='Datasets'>")
+				$("#Datasets").remove(); 
+				
+				setpresets(Presets[id]);
+				expand();
+				$('#Datasets').autosize();
+				
+				str = createcatalog();
+
+				//console.log(str)
+				$(".CodeMirror").remove();
+				$('#threddscatalog').empty().val(str);
+				
+				//var editor = CodeMirror.fromTextArea(document.getElementById('threddscatalog'), {lineNumbers:true,"mode":"xml", "value": catalog[0].outerHTML.replace(/\s.*\</g,'')});
+				var editor = CodeMirror.fromTextArea(document.getElementById('threddscatalog'), {lineNumbers:true,"mode":"xml"});
+				autoFormat(editor);
+			})
+			$("#presetselect").trigger("change");
+
+		});
+
+		</script>
+ 	<body>
+ 	<div id="submiturl"></div>
+ 	<div style="width:50%">
+	Examples: 
+ 	<div id="presets"></div>
+ 	
+ 	<!-- form id="form" action="/" method="post" -->
+ 		<input type="submit" class="try" value="Submit">
+		<hr/>
+		<div class="required">* Catalog ID
+ 		<input class="enter required" type="text" id="CatalogID"></input></div>
+ 		<br/>
+		<div class="required">* Catalog Name
+ 		<input class="enter required" type="text" id="CatalogName"></input></div>
+ 		<br/>
+		Catalog Description (If not specified, Catalog Name is used.)
+ 		<br/>
+		<input class="enter" type="text" id="CatalogDescription"></input>
+ 		<br/>
+		Catalog Description URL 
+ 		<br/>
+ 		<input class="enter" type="text" id="CatalogDescriptionURL"></input>
+ 		<br/><br/>
+		Dataset Description 
+ 		<br/>
+ 		<textarea class="enter" type="text" id="DatasetDescription"></textarea>
+ 		<br/>
+ 		Dataset Description URL 
+ 		<br/>
+ 			<textarea class="enter" type="text" id="DatasetDescriptionURL"></textarea>
+ 		<br/><br/>
+ 		<div class="required">* Dataset information (one line per).  Each dataset line must have a Dataset ID, [Dataset Description, other info].
+ 		<textarea class="required enter" id="Datasets"></textarea></div>
+ 		<br/>
+ 		<div class="required">* Start Date(s) (YYYY-MM-DD) (one or one line per dataset)
+		<textarea class="enter required" id="StartDates"></textarea></div>
+		<br/>
+ 		<div class="required">* Stop Date(s) (YYYY-MM-DD) (one or one line per dataset)
+			<textarea class="enter required" id="StopDates"></textarea>
+		</div>
+ 		<br/>
+ 		<div class="required">* URL template ($1 refers to Dataset ID, $2 refers to Dataset Description, etc.  %Y = four-digit year, %m = two-digit month, %d = two-digit day.)
+ 			<textarea id="URLTemplate" class="enter required"></textarea>
+ 		</div>
+ 		<input type="button" class="try" value="Expand">
+ 		<br/>	
+ 		Data URLs (Generated by expanding $ wildcards for each Dataset and % wildcards for entire timerange.) 
+ 		<br/>
+  		<textarea id="urls" class="try" style="display:none"></textarea>
+  		<div id="urls" class="try" style="display:none"></div>
+ 		<br/>  		
+ 		<input id="report0dataurls" type="button" onclick="ajaxRequest(this,'HEAD');" value="HEAD check">
+ 		<!-- 
+ 		<input id="report1dataurls" type="button" onclick="ajaxRequest(this,'GET');" value="GET check (slow)">
+	 	<input id="report2dataurls" type="button" onclick="ajaxReport(this,'report');" value="Report (slow)">
+ 	 	<input id="report3dataurls" type="button" onclick="ajaxReport(this,'plot');" value="Plots (slow)">
+ 	 	 -->
+		<br/>
+ 		<div id="urlsvalid" style="display:none">
+	 		Valid data urls
+	 		<br/>
+	  		<textarea id="urlsv" class="try"></textarea>
+	 		<br/>
+ 		</div>
+ 		<div id="urlsinvalid" style="display:none">
+	 		Invalid data urls
+	 		<br/>
+	  		<textarea id="urlsi" class="try"></textarea>
+	 		<br/>
+ 		</div>
+		<br/>
+ 		<span id="report0dataurls_span" style="display:none"><span id="report0dataurls_results"></span></span>
+	 	<span id="report1dataurls_span" style="display:none"><span id="report1dataurls_results"></span></span>
+	 	<span id="report2dataurls_span" style="display:none"><span id="report2dataurls_results"></span></span>
+		<span id="report3dataurls_span" style="display:none"><span id="report3dataurls_results"></span></span>
+ 		<hr/>
+		<div class="required">* Time Columns
+  		<input type="text" id="TimeColumns"></input></div>
+  		<br/>
+		<div class="required">* Time Format (if empty, and time is one column, is assumed to be ISO861)
+  		<input type="text" id="TimeFormat"></input>
+  		</div>
+  		<br/>
+		Time Units
+  		<input type="text" id="TimeUnits"></input>
+		Time Labels
+  		<input type="text" id="TimeLabels"></input>
+  		<br/>
+		<br/>
+ 		<div class="required">* Data Columns
+  			<textarea id="DataColumns"></textarea>
+  		</div>
+ 		<br/>
+		<div class="required">* Data Column IDs
+  			<textarea type="text" id="DataIDs"></textarea>
+  		</div>
+  		<br/>
+		<div class="required">* Data Column Names
+  			<textarea type="text" id="DataNames"></textarea>
+  		</div>
+  		<br/>
+		Data Column Labels
+  		<textarea type="text" id="DataLabels"></textarea>
+ 		<br/>
+		Data Column Values
+  		<textarea type="text" id="DataValues"></textarea>
+ 		<br/>
+		Data Column Types
+  		<textarea type="text" id="DataTypes"></textarea>
+ 		<br/>
+		Data Column Units
+  		<textarea type="text" id="DataUnits"></textarea>
+ 		<br/>
+		Data Column Renderings
+  		<textarea type="text" id="DataRenderings"></textarea>
+ 		<br/>
+		Data Column Fill Values
+  		<textarea type="text" id="DataFillValues"></textarea>
+ 		<br/>
+ 		<br/>
+		<div class="required">* Data Column Group IDs
+  		<textarea type="text" id="DataGroupIDs"></textarea></div>
+ 		<br/>
+		<div class="required">* Data Column Group Names
+  		<textarea type="text" id="DataGroupNames"></textarea></div>
+ 		<br/>
+		Data Column Group Labels
+  		<textarea type="text" id="DataGroupLabels"></textarea>
+ 		<br/>
+		<br/>
+ 		Skip lines
+ 		<br/>
+ 		<input type="text" id="SkipLines"></input>
+ 		<br/>
+ 		Data line regular expression
+ 		<br/>
+ 		<input type="text" id="LineRegex"></input>
+ 		<br/>
+ 		Comment character
+ 		<br/>
+ 		<input type="text" id="CommentCharacter"></input>
+ 		<br/>
+ 		Data delimiter
+		<input type="text" id="DataDelimiter"></input>
+ 		<br/>
+ 		Data line format
+ 		<input type="text" id="DataLineFormat"></input>
+		<br/>
+		<div class="required">* Data Reader
+  		<input type="text" id="DataReader"></input></div>
+ 		<br/>
+		
+	<hr/>
+	</div>
+
+ 	<div id="catalogdiv" style="display:none">
+		<input id="threddscatalogtry" type="button" onclick="threddsTry();" value="Try"/> catalog.thredds:
+	 	<textarea class="try" id="threddscatalog">Hello</textarea>
+		<br/>
+		<textarea class="try" id="threddstemplate" style="display:none">
+			<catalog id="" name="" xmlns:xlink="http://www.w3.org/1999/xlink">
+    				<documentation xlink:href="" xlink:title=""/>
+					<dataset name="">
+						<documentation xlink:href="" xlink:title=""/>
+						<timeCoverage>
+							<Start></Start>
+							<End></End>
+						</timeCoverage>
+						<groups>
+							<group/>
+						</groups>
+						<variables>
+							<variable/>
+						</variables>
+				</dataset>
+			</catalog>
+		 </textarea>
+	</div>
+	<br/>
+
+ 	<div id="dlscript" style="display:none">
+		Download Script
+	 	<br/>
+	  	<textarea id="script" class="try" ></textarea>
+ 	</div> 	
+ 	</body>
+ </html>

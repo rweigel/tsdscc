@@ -1,0 +1,57 @@
+<groups>
+	<group id="X_TOD,Y_TOD,Z_TOD" name="XYZ_TOD" label="XYZ_TOD" type="vector"/>
+	<group id="Lat_TOD,Lon_TOD" name="LatLon_TOD" label="LatLon_TOD" type="vector"/>
+	<group id="X_J2K,Y_J2K,Z_J2K" name="XYZ_TOD" label="XYZ_TOD" type="vector"/>
+	<group id="Lat_J2K,Lon_J2K" name="LatLon_J2K" label="LatLon_J2K" type="vector"/>
+	<group id="X_GEO,Y_GEO,Z_GEO" name="XYZ_GEO" label="XYZ_GEO" type="vector"/>
+	<group id="Lat_GEO,Lon_GEO,LT_GEO" name="LatLonLT_GEO" label="LatLonLT_GEO" type="vector"/>
+	<group id="X_GM,Y_GM,Z_GM" name="XYZ_GM" label="XYZ_GM" type="vector"/>
+	<group id="Lat_GM,Lon_GM,LT_GM" name="LatLonLT_GM" label="LatLonLT_GM" type="vector"/>
+	<group id="X_GSE,Y_GSE,Z_GSE" name="XYZ_GSE" label="XYZ_GSE" type="vector"/>
+	<group id="Lat_GSE,Lon_GSE,LT_GSE" name="LatLonLT_GSE" label="LatLonLT_GSE" type="vector"/>
+	<group id="X_GSM,Y_GSM,Z_GSM" name="XYZ_GSM" label="XYZ_GSM" type="vector"/>
+	<group id="Lat_GSM,Lon_GSM" name="LatLon_GSM" label="LatLon_GSM" type="vector"/>
+	<group id="X_SM,Y_SM,Z_SM" name="XYZ_SM" label="XYZ_SM" type="vector"/>
+	<group id="Lat_SM,Lon_SM,LT_SM" name="LatLonLT_SM" label="LatLonLT_SM" type="vector"/>
+</groups>
+<variables>
+	<variable id="X_TOD" name="X_TOD" label="X Position in the Geocentric Equatorial Inertial coordinate system, also known as True Equator and True Equinox of Date, True of Date TOD, ECI, or GCI" units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="4" lineregex=""/>
+	<variable id="Y_TOD" name="Y_TOD" label="Y Position in the Geocentric Equatorial Inertial coordinate system, also known as True Equator and True Equinox of Date, True of Date TOD, ECI, or GCI" units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="5" lineregex=""/>
+	<variable id="Z_TOD" name="Z_TOD" label="Z Position in the Geocentric Equatorial Inertial coordinate system, also known as True Equator and True Equinox of Date, True of Date TOD, ECI, or GCI" units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="6" lineregex=""/>
+	<variable id="Lat_TOD" name="Lat_TOD" label="Lat Position in the Geocentric Equatorial Inertial coordinate system, also known as True Equator and True Equinox of Date, True of Date TOD, ECI, or GCI" units="deg" type="scalar" fillvalue="1e31" rendering="%.2f" columns="7" lineregex=""/>
+	<variable id="Lon_TOD" name="Lon_TOD" label="Lon Position in the Geocentric Equatorial Inertial coordinate system, also known as True Equator and True Equinox of Date, True of Date TOD, ECI, or GCI" units="deg" type="scalar" fillvalue="1e31" rendering="%.2f" columns="8" lineregex=""/>
+	<variable id="X_J2K" name="X_J2K" label="X Position in the Geocentric Equatorial Inertial coordinate system for epoch J2000.0 GEI2000, also known as Mean Equator and Mean Equinox of J2000.0" units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="9" lineregex=""/>
+	<variable id="Y_J2K" name="Y_J2K" label="Y Position in the Geocentric Equatorial Inertial coordinate system for epoch J2000.0 GEI2000, also known as Mean Equator and Mean Equinox of J2000.0" units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="10" lineregex=""/>
+	<variable id="Z_J2K" name="Z_J2K" label="Z Position in the Geocentric Equatorial Inertial coordinate system for epoch J2000.0 GEI2000, also known as Mean Equator and Mean Equinox of J2000.0" units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="11" lineregex=""/>
+	<variable id="Lat_J2K" name="Lat_J2K" label="Lat Position in the Geocentric Equatorial Inertial coordinate system for epoch J2000.0 GEI2000, also known as Mean Equator and Mean Equinox of J2000.0" units="deg" type="scalar" fillvalue="1e31" rendering="%.2f" columns="12" lineregex=""/>
+	<variable id="Lon_J2K" name="Lon_J2K" label="Lon Position in the Geocentric Equatorial Inertial coordinate system for epoch J2000.0 GEI2000, also known as Mean Equator and Mean Equinox of J2000.0" units="deg" type="scalar" fillvalue="1e31" rendering="%.2f%.2f" columns="13" lineregex=""/>
+	<variable id="X_GEO" name="X_GEO" label="X Position in the Geographic coordinate system, also known as Greenwich Rotating Coordinates GRC, or Earth-fixed Greenwich EFG" units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="14" lineregex=""/>
+	<variable id="Y_GEO" name="Y_GEO" label="Y Position in the Geographic coordinate system, also known as Greenwich Rotating Coordinates GRC, or Earth-fixed Greenwich EFG" units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="15" lineregex=""/>
+	<variable id="Z_GEO" name="Z_GEO" label="Z Position in the Geographic coordinate system, also known as Greenwich Rotating Coordinates GRC, or Earth-fixed Greenwich EFG" units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="16" lineregex=""/>
+	<variable id="Lat_GEO" name="Lat_GEO" label="Latitude in the Geographic coordinate system, also known as Greenwich Rotating Coordinates GRC, or Earth-fixed Greenwich EFG" units="deg" type="scalar" fillvalue="1e31" rendering="%.2f" columns="17" lineregex=""/>
+	<variable id="Lon_GEO" name="Lon_GEO" label="Longitude in the Geographic coordinate system, also known as Greenwich Rotating Coordinates GRC, or Earth-fixed Greenwich EFG" units="deg" type="scalar" fillvalue="1e31" rendering="%04d" columns="18" lineregex=""/>
+	<variable id="LT_GEO" name="LT_GEO" label="Local time in the Geographic coordinate system, also known as Greenwich Rotating Coordinates GRC, or Earth-fixed Greenwich EFG" units="$H:$M" type="scalar" fillvalue="1e31" rendering="%s" columns="19" lineregex=""/>
+	<variable id="X_GM" name="X_GM" label="X Position in the Geomagnetic coordinate system." units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="20" lineregex=""/>
+	<variable id="Y_GM" name="Y_GM" label="Y Position in the Geomagnetic coordinate system." units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="21" lineregex=""/>
+	<variable id="Z_GM" name="Z_GM" label="Z Position in the Geomagnetic coordinate system." units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="22" lineregex=""/>
+	<variable id="Lat_GM" name="Lat_GM" label="Latitude in the Geomagnetic coordinate system." units="deg" type="scalar" fillvalue="1e31" rendering="%.2f" columns="23" lineregex=""/>
+	<variable id="Lon_GM" name="Lon_GM" label="Longigude in the Geomagnetic coordinate system." units="deg" type="scalar" fillvalue="1e31" rendering="%04d" columns="24" lineregex=""/>
+	<variable id="LT_GM" name="LT_GM" label="Local time in the Geomagnetic coordinate system." units="$H:$M" type="scalar" fillvalue="1e31" rendering="%.2f" columns="25" lineregex=""/>
+	<variable id="X_GSE" name="X_GSE" label="X Position in the Geocentric Solar Ecliptic coordinate system" units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="26" lineregex=""/>
+	<variable id="Y_GSE" name="Y_GSE" label="Y Position in the Geocentric Solar Ecliptic coordinate system" units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="27" lineregex=""/>
+	<variable id="Z_GSE" name="Z_GSE" label="Z Position in the Geocentric Solar Ecliptic coordinate system" units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="28" lineregex=""/>
+	<variable id="Lat_GSE" name="Lat_GSE" label="Lat Position in the Geocentric Solar Ecliptic coordinate system" units="deg" type="scalar" fillvalue="1e31" rendering="%.2f" columns="29" lineregex=""/>
+	<variable id="Lon_GSE" name="Lon_GSE" label="Lon Position in the Geocentric Solar Ecliptic coordinate system" units="deg" type="scalar" fillvalue="1e31" rendering="%04d" columns="30" lineregex=""/>
+	<variable id="LT_GSE" name="LT_GSE" label="LT Position in the Geocentric Solar Ecliptic coordinate system" units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="31" lineregex=""/>
+	<variable id="X_GSM" name="X_GSM" label="X Position in the Geocentric Solar Magnetospheric coordinate system" units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="32" lineregex=""/>
+	<variable id="Y_GSM" name="Y_GSM" label="Y Position in the Geocentric Solar Magnetospheric coordinate system" units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="33" lineregex=""/>
+	<variable id="Z_GSM" name="Z_GSM" label="Z Position in the Geocentric Solar Magnetospheric coordinate system" units="deg" type="scalar" fillvalue="1e31" rendering="%.2f" columns="34" lineregex=""/>
+	<variable id="Lat_GSM" name="Lat_GSM" label="Lat Position in the Geocentric Solar Magnetospheric coordinate system" units="deg" type="scalar" fillvalue="1e31" rendering="%.2f" columns="35" lineregex=""/>
+	<variable id="Lon_GSM" name="Lon_GSM" label="Lon Position in the Geocentric Solar Magnetospheric coordinate system" units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="36" lineregex=""/>
+	<variable id="X_SM" name="X_SM" label="X Position in the Solar Magnetic coordinate system" units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="37" lineregex=""/>
+	<variable id="Y_SM" name="Y_SM" label="Y Position in the Solar Magnetic coordinate system" units="R_E" type="scalar" fillvalue="1e31" rendering="%.2f" columns="38" lineregex=""/>
+	<variable id="Z_SM" name="Z_SM" label="Z Position in the Solar Magnetic coordinate system" units="deg" type="scalar" fillvalue="1e31" rendering="%.2f" columns="39" lineregex=""/>
+	<variable id="Lat_SM" name="Lat_SM" label="Latitude in the Solar Magnetic coordinate system" units="deg" type="scalar" fillvalue="1e31" rendering="%.2f" columns="40" lineregex=""/>
+	<variable id="Lon_SM" name="Lon_SM" label="Longitude in the Solar Magnetic coordinate system" units="deg" type="scalar" fillvalue="1e31" rendering="%.2f" columns="41" lineregex=""/>
+	<variable id="LT_SM" name="LT_SM" label="Local time in the Solar Magnetic coordinate system" units="$H:$M" type="scalar" fillvalue="1e31" rendering="%s" columns="42" lineregex=""/>
+</variables>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalog id="ViRBO/TSX-5" name="">
+  <documentation xlink:href="http://virbo.org/ftp/users/ginet/CEASE-TSX-5/" xlink:title="Root of data directory with READMEs"/>
+  <documentation xlink:title="Catalog generation date: 2016-05-22"/>
+  <dataset id="EPHX" name="Extended Ephemeris Information for TSX-5/CEASE" label="Ephemeris information for the CEASE spacecraft, including CEASE look direction, magnetic field, S/C position, and S/C velocity." timeformat="$Y,$j,$S" urltemplate="http://virbo.org/ftp/users/ginet/CEASE-TSX-5/EPHX/$Y/ephx_$y_$j.txt">
+    <timeCoverage>
+      <Start>2000-06-08</Start>
+      <End>2006-07-05</End>
+      <Cadence>PT5S</Cadence>
+    </timeCoverage>
+    <variables>
+      <variable id="PitchAngle" name="Pitch Angle" label="Pitch Angle" units="deg" type="scalar" fillvalue="" rendering=".2f" columns="4"/>
+      <variable id="C_V_X" name="C_V_X" label="X component with resepct to the CEASE instrument look direction vector (normalized ECI coord system)" units="" type="scalar" fillvalue="" rendering=".2f" columns="5"/>
+      <variable id="C_V_Y" name="C_V_Y" label="Y component with resepct to the CEASE instrument look direction vector (normalized ECI coord system)" units="" type="scalar" fillvalue="" rendering=".2f" columns="6"/>
+      <variable id="C_V_Z" name="C_V_Z" label="Z component with resepct to the CEASE instrument look direction vector (normalized ECI coord system)" units="" type="scalar" fillvalue="" rendering=".2f" columns="7"/>
+      <variable id="BX" name="BX" label="X component of magnetic field (ECI coord system)" units="Gauss" type="scalar" fillvalue="" rendering=".2f" columns="8"/>
+      <variable id="BY" name="BY" label="Y component of magnetic field (ECI coord system)" units="Gauss" type="scalar" fillvalue="" rendering=".2f" columns="9"/>
+      <variable id="BZ" name="BZ" label="Z component of magnetic field (ECI coord system)" units="Gauss" type="scalar" fillvalue="" rendering=".2f" columns="10"/>
+      <variable id="X" name="X" label="X component of the ECI satellite position" units="km" type="scalar" fillvalue="" rendering=".2f" columns="11"/>
+      <variable id="Y" name="Y" label="Y component of the ECI satellite position" units="km" type="scalar" fillvalue="" rendering=".2f" columns="12"/>
+      <variable id="Z" name="Z" label="Z component of the ECI satellite position" units="km" type="scalar" fillvalue="" rendering=".2f" columns="13"/>
+      <variable id="VX" name="VX" label="X component of the ECI satellite velocity" units="km/s" type="scalar" fillvalue="" rendering=".2f" columns="14"/>
+      <variable id="VY" name="VY" label="Y component of the ECI satellite velocity" units="km/s" type="scalar" fillvalue="" rendering=".2f" columns="15"/>
+      <variable id="VZ" name="VZ" label="Z component of the ECI satellite velocity" units="km/s" type="scalar" fillvalue="" rendering=".2f" columns="16"/>
+    </variables>
+  </dataset>
+  <dataset id="CEASE" name="CEASE Instrument Measurements"  timeformat="$Y,$j,$S" urltemplate="http://virbo.org/ftp/users/ginet/CEASE-TSX-5/CEASE/$Y/tsx5_$y_$j.txt">
+    <timeCoverage>
+      <Start>2000-06-08</Start>
+      <End>2006-07-05</End>
+      <Cadence>PT5S</Cadence>
+    </timeCoverage>
+    <variables>
+      <variable id="GeodeticAltitude" name="Geodetic Altitude" label="" units="km" fillvalue="" rendering=".1f" columns="4"/>
+      <variable id="GeodeticLatitude" name="GeodeticLatitude" label="" units="deg" fillvalue="" rendering=".2f" columns="5"/>
+      <variable id="Longitude" name="Longitude" label="Longitude (0-360)" units="deg" fillvalue=".2f" rendering="" columns="6"/>
+      <variable id="MLT" name="Magnetic Local Time" label="Magnetic Local Time (0-24)" units="" fillvalue="" rendering=".2f" columns="7"/>
+      <variable id="Radius" name="Radius" label="Radius" units="km" fillvalue="" rendering=".3f" columns="8"/>
+      <variable id="MagneticLatitude" name="Magnetic Latitude" units="deg" fillvalue="" rendering=".2f" columns="9"/>
+      <variable id="L" name="L-shell" fillvalue="-1" rendering=".2f" columns="10"/>
+      <variable id="B/B0" name="B/B0" fillvalue="-1" rendering=".2f" columns="11"/>
+      <variable id="D1" name="DD1LF" label="DOSIMETER DD2LF" fillvalue="" rendering=".3e" columns="12"/>
+      <variable id="D2" name="DD2LF" label="DOSIMETER DD2LF" fillvalue="" rendering=".3e" columns="13"/>
+      <variable id="D3" name="DD1HFA" label="DOSIMETER DD1HFA" fillvalue="" rendering=".3e" columns="14"/>
+      <variable id="D4" name="DD2HFA" label="DOSIMETER DD2HFA" fillvalue="" rendering=".3e" columns="15"/>
+      <variable id="D5" name="DD2HFB" label="DOSIMETER DD1HFB" fillvalue="" rendering=".3e" columns="16"/>
+      <variable id="D6" name="DD2HFB" label="DOSIMETER DD2HFB" fillvalue="" rendering=".3e" columns="17"/>
+      <variable id="D1D2" name="D1 + D2" fillvalue="" rendering=".3e" columns="18"/>
+      <variable id="D2D3" name="D2 + D3" fillvalue="" rendering=".3e" columns="19"/>
+      <variable id="T1" name="TELESCOPE SUM &gt; .06 MeV" fillvalue="" rendering=".3e" columns="20"/>
+      <variable id="T2" name="TELESCOPE SUM &gt; .125 MeV" fillvalue="" rendering=".3e" columns="21"/>
+      <variable id="T3" name="TELESCOPE SUM &gt; .30 MeV" fillvalue="" rendering=".3e" columns="22"/>
+      <variable id="T4" name="TELESCOPE SUM &gt; .55 MeV" fillvalue="" rendering=".3e" columns="23"/>
+      <variable id="T5" name="TELESCOPE LBSUM3" fillvalue="" rendering=".3e" columns="24"/>
+      <variable id="T6" name="TELESCOPE LBSUMA" fillvalue="" rendering=".3e" columns="25"/>
+      <variable id="T7" name="TELESCOPE LBSUM5" fillvalue="" rendering=".3e" columns="26"/>
+      <variable id="T8" name="TELESCOPE LB3_3" fillvalue="" rendering=".3e" columns="27"/>
+      <variable id="T9" name="TELESCOPE LB4_3" fillvalue="" rendering=".3e" columns="28"/>
+      <variable id="SEU" name="SR6" fillvalue="" rendering="d" columns="29"/>
+      <variable id="ProtonEvent" name="Proton event (based on GOES data)" label="Proton event (based on GOES data) (1= yes, 0=no)" fillvalue="" rendering="d" columns="30"/>
+    </variables>
+  </dataset>
+</catalog>

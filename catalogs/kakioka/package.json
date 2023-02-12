@@ -1,0 +1,13 @@
+{
+	"name": "intermagnet",
+  	"version": "0.1.0",
+	"dependencies": {
+		"xml2js"   : "*",
+		"request"  : "*",
+		"moment"   : "*",
+		"unzip"    : "*",
+		"jsdom"    : "3.*",
+		"express"  : "3.1.0",
+		"tsdset"   : "https://github.com/rweigel/tsdset/tarball/master"
+	}
+}

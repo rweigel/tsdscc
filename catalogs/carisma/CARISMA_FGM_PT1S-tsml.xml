@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalog xmlns:xlink="http://www.w3.org/1999/xlink" id="CARISMA/FGM/PT1S" name="CARISMA fluxgate magnetometer data at 1-second cadence">
+  <documentation xlink:href="https://www.carisma.ca/" xlink:title="CARISMA web page"/>
+  <documentation xlink:href="http://github.com/tsds/tsds2/tsdscc/catalogs/carisma" xlink:title="Catalog generation software"/>
+  <documentation xlink:href="/" xlink:title="Catalog generation date: 2014-10-16T01:04:52.645Z"/>
+  <documentation xlink:href="http://www.carisma.ca/carisma-data/data-use-requirements" xlink:title="Data use requirements"/>
+  <dataset id="FCHP" name="Fort Chipewyan" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dFCHP.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-01</Start>
+      <End>2012-09-12</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="FCHP X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="FCHP Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="FCHP Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="FCHU" name="Fort Churchill" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dFCHU.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-01</Start>
+      <End>2014-09-28</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="FCHU X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="FCHU Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="FCHU Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="FSIM" name="Fort Simpson" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dFSIM.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-01</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="FSIM X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="FSIM Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="FSIM Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="FSMI" name="Fort Smith" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dFSMI.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-01</Start>
+      <End>2014-09-09</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="FSMI X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="FSMI Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="FSMI Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="GILL" name="Gillam" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dGILL.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-01</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="GILL X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="GILL Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="GILL Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="GULL" name="Gull Lake" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dGULL.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-01</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="GULL X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="GULL Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="GULL Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="ISLL" name="Island Lake" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dISLL.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-01</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="ISLL X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="ISLL Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="ISLL Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="LGRR" name="Little Grand Rapids" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dLGRR.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-01</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="LGRR X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="LGRR Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="LGRR Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="MCMU" name="Fort McMurray" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dMCMU.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-01</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="MCMU X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="MCMU Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="MCMU Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="MSTK" name="Ministik Lake" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dMSTK.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-01</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="MSTK X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="MSTK Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="MSTK Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="NORM" name="Norman Wells" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dNORM.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-01</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="NORM X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="NORM Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="NORM Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="PINA" name="Pinawa" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dPINA.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-01</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="PINA X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="PINA Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="PINA Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="POLS" name="Polson" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dPOLS.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-01</Start>
+      <End>2014-07-14</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="POLS X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="POLS Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="POLS Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="RABB" name="Rabbit Lake" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dRABB.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-01</Start>
+      <End>2014-09-29</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="RABB X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="RABB Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="RABB Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="RANK" name="Rankin Inlet" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dRANK.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-01</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="RANK X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="RANK Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="RANK Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="THRF" name="Thief River Falls" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dTHRF.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-01</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="THRF X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="THRF Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="THRF Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="VULC" name="Vulcan" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dVULC.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-01</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="VULC X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="VULC Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="VULC Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="WEYB" name="Weyburn" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dWEYB.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-01</Start>
+      <End>2014-06-28</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="WEYB X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="WEYB Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="WEYB Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="DAWS" name="Dawson City" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dDAWS.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-04</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="DAWS X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="DAWS Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="DAWS Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="BACK" name="Back Lake" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dBACK.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-06</Start>
+      <End>2012-01-06</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="BACK X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="BACK Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="BACK Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="TALO" name="Taloyoak" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dTALO.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-01-11</Start>
+      <End>2014-08-20</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="TALO X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="TALO Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="TALO Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="WGRY" name="Wells Gray" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dWGRY.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-03-25</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="WGRY X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="WGRY Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="WGRY Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="OSAK" name="Osakis" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dOSAK.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-04-03</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="OSAK X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="OSAK Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="OSAK Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="ANNA" name="Ann Arbor" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dANNA.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-06-04</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="ANNA X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="ANNA Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="ANNA Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+  <dataset id="OXFO" name="Oxford House" label="Data source institute: https://www.carisma.ca/carisma-data-repository" timecolumns="1" timeformat="$Y$m$d$H$M$S" urltemplate="mirror:http://www.carisma.ca/FGM/$Y$m$dOXFO.F01.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://www.carisma.ca/carisma-data/product-info" xlink:title="Data product information"/>
+    <timeCoverage>
+      <Start>2012-09-20</Start>
+      <End>2013-09-26</End>
+      <Cadence>PT1S</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="OXFO X" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="2"/>
+      <variable id="Y" name="Y" label="OXFO Y" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="3"/>
+      <variable id="Z" name="Z" label="OXFO Z" units="nT" type="scalar" fillvalue="99999.00" rendering="%.3f" columns="4"/>
+    </variables>
+  </dataset>
+</catalog>

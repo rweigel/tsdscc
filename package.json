@@ -1,0 +1,14 @@
+{
+	"name": "tsdscc",
+  	"version": "0.0.1",
+	"dependencies":
+	{
+		"xml2js"   : "*",
+		"request"  : "2.9.203",
+		"express"  : "3.1.0",
+		"mkdirp"   : "*",
+		"readdirp" : "*",
+		"cli-color": "*",
+	    "yargs"    : "*"
+	}
+}

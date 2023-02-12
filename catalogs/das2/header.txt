@@ -1,0 +1,26 @@
+[00]000340<stream compression="none" version="2.2" >
+  <properties DatumRange:xCacheRange="2011-217T00:00:00.000Z to 2011-217T00:00:01.000Z UTC"
+              String:title="Juno Ephemeris Geocentric Parameters at %{xCacheResolution} Intervals"
+              Datum:xCacheResolution="10800.000 s"
+              String:sourceId="das2_ascii"/>
+</stream>
+[01]000581<packet>
+  <x type="time23" units="us2000">
+  </x>
+  <y name="radius" type="ascii12" units="Re">
+    <properties String:yLabel="R!DE!N"
+                String:yFormat="%.2f"/>
+  </y>
+  <y name="mlat" type="ascii12" units="degrees">
+    <properties String:yLabel="MLat"
+                String:yFormat="%.2f"/>
+  </y>
+  <y name="mlt" type="ascii12" units="hours">
+    <properties String:yLabel="MLT"
+                String:yFormat="%.2f"/>
+  </y>
+  <y name="l_shell" type="ascii12" units="">
+    <properties String:yLabel="L"
+                String:yFormat="%.2f"/>
+  </y>
+</packet>

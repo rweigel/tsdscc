@@ -1,0 +1,58 @@
+{
+	"catalog": 
+	{ 
+		"$": {
+				"id": "USGS/Mag/RT/PT1S",
+				"name": "USGS Real Time 1-Second Magnetometer Measurements"
+			},
+		"documentation": 
+						[
+							{
+							"$":
+								{
+							 		"xlink:href":"http://magweb.cr.usgs.gov/data/magnetometer/",
+							 		"xlink:title":"Catalog derived by inspection of http://magweb.cr.usgs.gov/data/magnetometer/."
+								}
+							},
+							{
+							"$":
+								{
+							 		"xlink:href": "http://github.com/tsds/tsds2/tsdscc/catalogs/usgs",
+							 		"xlink:title": "Catalog generation program."
+								}
+							},								
+							{
+							"$":
+								{
+							 		"xlink:title": "/",
+							 		"xlink:title": "Catalog generation date: "
+								}
+							}								
+			 			],
+		"dataset": 	
+					[
+						{
+							"$":
+								{
+							 		"id":"$1",
+							 		"name":"$1 one-second",
+							 		"label":"$1 one-second real-time measurements from USGS",
+							 		"timecolumns":"1,2",
+							 		"timeformat":"$Y-$m-$d,$H:$M:$S.$(millis)",
+							 		"lineregex":"^[0-9]",
+							 		"urltemplate":"http://magweb.cr.usgs.gov/data/magnetometer/$1/OneSecond/$2$Y$m$dvsec.sec"
+								},
+							"timeCoverage": {"Start":"","End":""},
+							"groups": {"group":{"$": {"id":"H,D,Z", "name":"$1 HDZ components", "label":"$1 HDZ components", "type":"vector"}}},
+							"variables": {
+											"variable": [
+															{"$":{"id":"DOY", "name":"Day of Year", "label":"DOY", "units":"Gregorian","type":"scalar","fillvalue":"","rendering":"%j","columns":"3"}},
+														 	{"$":{"id":"H", "name":"$1 H", "label":"$1H", "units":"nT","type":"scalar","fillvalue":"99999.00","rendering":"%.2f","columns":"4"}},
+															{"$":{"id":"D", "name":"$1 D", "label":"$1D", "units":"nT","type":"scalar","fillvalue":"99999.00","rendering":"%.2f","columns":"5"}},
+															{"$":{"id":"Z", "name":"$1 Z", "label":"$1Z", "units":"nT","type":"scalar","fillvalue":"99999.00","rendering":"%.2f","columns":"6"}}
+														 ]
+										}
+						}
+					]
+	}
+}

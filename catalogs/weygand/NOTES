@@ -1,0 +1,252 @@
+<span style="background-color:yellow">Note that links that start with <code>http://localhost:8004</code> will not work.  Over the next day or so after a TSDS server update, I'll replace the links with <code>http://tsds.org/get/</code></span>.
+
+= Definitions =
+
+* TSDS - Time Series Data Server - A "back-end" data server.  Handles concatenation of granules (both files in directories and requests from data services).  Uses Autoplot file processor libraries and custom wrapper code written in [http://node.js/ node.js].  Handles things like optimizing delivery speed of data and minimizing duplicate or redunant requests to servers it pulls data from.
+* TSDSFE - [http://tsds.org/get/ Time Series Data Server Front-End] Takes an input of catalog, dataset, timerange and allows visualization in Autoplot and ViViz and creates ~10 line "fill my array scripts" in IDL/Python/MATLAB. Also monitors back-end servers that it needs and reports on problems.
+* TSDS Catalog - Contains information needed by TSDSFE to do everything (uses URI Templates and a [http://www.unidata.ucar.edu/software/thredds/current/tds/catalog/ THREDDS]-like syntax).
+* TSDS DD - [http://tsds.org/dd TSDS Dataset Description] Used for communication between Autoplot and ViViz.  Also used as an simple way of creating a TSDS Catalog with a URL string.
+
+= Overview of Demo =
+
+Use the [http://vmo.igpp.ucla.edu/data1/Weygand/ Weygand Bow Shock Data Base] to show process of 
+
+* using a DD to create a TSDSFE Catalog for a subset of the data base; and
+* using a TSDSFE Catalog
+
+to enable all of the value-added services that TSDSFE connects to.  The databased is composed of ASCII files (granules) that span one month and have records with a cadence of 60 seconds.
+
+Major SPASE- and metadata-related issues encountered:
+* SPASE records have incorrect start/stop times for some datasets.
+* Granules have timeformats and fill values that vary within some datasets.  SPASE record does not indicate this; README found in data set directory indicates timeformat should be same for all granules in dataset.
+* Directory naming convention for granules varies and is inconsistent with SPASE record.
+* Lack of a pointer in dataset READMEs to SPASE record and vice-versa.
+* Some READMEs are missing.  (Have not checked if any SPASE records missing.)
+* Variable naming convention in some dataset READMEs is different from that used in SPASE record.
+* Fill values not documented in SPASE record but appear in READMEs when they exist.
+
+All of the SPASE-related issues are not surprising.  The job of completing a SPASE record is typically considered complete if it passes schema validation tests.  However, it appears that no tests are performed to validate other things that are needed by automated processing as attempted here or checks made for potential points of confusion by human consumers of the SPASE record who click on some of the links within it.
+
+I am not sure how many people prefer the README vs. the SPASE record.  Based on experience, I usually go directly to the README when using data as I know that that the transformation of information in a README to that in the SPASE records can often be, say, lossy.
+
+Preview of things we can do given a TSDFE Catalog for the Weygand Bow Shock Data Base:
+* Download a parameter and dataset into IDL/MATLAB/Python data structure; includes (eventually ...) a README for information on how to cite <span style="background-color:yellow">(TODO: Add fill value in script and download README in script.)</code>) [http://localhost:8004/?catalog=Weygand/PropagatedSolarWind&dataset=weimer/Geotail/GSM/mag/part2&parameters=Bz-GSM&start=-P3D&stop=2015-01-01&return=script&format=autoplot Autoplot] | [http://localhost:8004/?catalog=Weygand/PropagatedSolarWind&dataset=weimer/Geotail/GSM/mag/part2&parameters=Bz-GSM&start=-P3D&stop=2015-01-01&return=script&format=idl IDL] | [http://localhost:8004/?catalog=Weygand/PropagatedSolarWind&dataset=weimer/Geotail/GSM/mag/part2&parameters=Bz-GSM&start=-P3D&stop=2015-01-01&return=script&format=matlab MATLAB] | [http://localhost:8004/?catalog=Weygand/PropagatedSolarWind&dataset=weimer/Geotail/GSM/mag/part2&parameters=Bz-GSM&start=-P3D&stop=2015-01-01&return=script&format=python Python]
+* View [[http://localhost:8002/#dir=http%3A%2F%2Flocalhost%3A8004%2F%3Fcatalog%3DIMAGE%2FPT1M%26dataset%3DABK%26parameters%3DX%26return%3Dimage%26format%3Dpng%26type%3Dtimeseries%26style%3D0%26image.width%3D800%26image.height%3D200&strftime=%26start%3D-P1D%26stop%3D%24Y-%24m-%24d&start=1998-01-01&stop=2014-09-30&regexp=2014&number=272 overview plots] of the entire dataset (one day per plot) <span style="background-color:yellow">TODO: This is the wrong dataset.  Fix link.</span>
+* View and export data for a given parameter in [http://localhost:8004/?catalog=Weygand/PropagatedSolarWind&dataset=weimer/Geotail/GSM/mag/part2&parameters=Bz-GSM&start=-P3D&stop=2015-01-01&return=image&format=jnlp Autoplot]
+* View a web-based plot of a given parameter in a specified timerange [http://localhost:8004/#catalog=Weygand/PropagatedSolarWind&dataset=weimer/Geotail/GSM/mag/part2&parameters=Bz-GSM&start=-P3D&stop=2015-01-01&return=image&format=png&type=timeseries&style=0 PNG] | [http://localhost:8004/#catalog=Weygand/PropagatedSolarWind&dataset=weimer/Geotail/GSM/mag/part2&parameters=Bz-GSM&start=-P3D&stop=2015-01-01&return=image&format=pdf&type=timeseries&style=0 PDF] | [http://localhost:8004/#catalog=Weygand/PropagatedSolarWind&dataset=weimer/Geotail/GSM/mag/part2&parameters=Bz-GSM&start=-P3D&stop=2015-01-01&return=image&format=svg&type=timeseries&style=0 SVG] 
+* [http://localhost:8004/?catalog=Weygand/PropagatedSolarWind&dataset=weimer/Geotail/GSM/mag/part2&parameters=Bz-GSM&start=-P3D&stop=2015-01-01&return=urilist&attach=false View URLs] used to fulfill data request
+* View a numbers used to generate plot of a given parameter in a [http://localhost:8004/?catalog=Weygand/PropagatedSolarWind&dataset=weimer/Geotail/GSM/mag/part2&parameters=Bz-GSM&start=-P3D&stop=2015-01-01&return=data&attach=false Web Page] | [http://localhost:8004/?catalog=Weygand/PropagatedSolarWind&dataset=weimer/Geotail/GSM/mag/part1&parameters=x-GSM&start=-P3D&stop=2015-01-01&return=data ASCII File]
+* [https://localhost:8004/#catalog=Weygand/PropagatedSolarWind Explore] other things that TSDSFE can do with this dataset
+* Import a [http://localhost:8004/?catalog=Weygand/PropagatedSolarWind&return=autoplot-bookmarks] list of bookmarks for all datasets/parameters into Autoplot
+
+= Steps =
+
+These are the approximate steps that were taken to create the TSDS Catalog.
+
+== Preliminary ==
+
+# [https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=weygand%20bow%20shock%20data%20set Search for weygand bow shock data set]
+# [http://vmo.nasa.gov/mission/metadata/VMO/NumericalData/Weygand/Wind/TAP/Propagated.3DP/GSE/PT60S.xml Inspect first link]
+# Find reference to 
+: http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSE/weimer/Wind/TAP
+# Inspect link above and find
+: http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSE/weimer/Wind/TAP/V3/
+: and note that V3 directory was not mentioned in SPASE record.)
+# Look for start/stop time in SPASE record, and attempt to verify it is correct by inspection of [http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSE/weimer/Wind/TAP/V3/ data directory].  Find directory has data through <code>2014-09</code> but SPASE record has <code>End = 2010-06-30T23:59:00.000</code>. ''This is why I advocate the autogeneration and nightly updating of SPASE records for details like this.  At one point in time, the End date was correct.  But once the record is written, it requires human manual inspection to update it.  Which probably won't occur after the grant expires.''
+
+After some inital testing, I decided to start with the
+# the [http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag/ Geotail/mag dataset] in the database.
+# and its corresponding [http://vmo.nasa.gov/mission/metadata/VMO/NumericalData/Weygand/Geotail/MGF/Processed/GSM/PT60S.xml SPASE record].
+
+With the above two links, I now have enough information to serve this data through TSDSFE.  I am going to do this using three approaches: 
+# By telling TSDSFE the minimal amount of information it needs to serve the numbers without useful metadata from the dataset.
+# By telling TSDSFE the minimal amount of information it needs to allow it to create plots with appropriate labels.
+# By writing a TSDS catalog with the full information about all of the data sets in the Weygand database (in this document, I only describe the catalog for four of the datasets; the others have either not been tested or not been written).
+
+Then, I'll discuss how a hypothetical SPASE service could have been used to do 3. above instead.
+
+== 1. ==
+
+Based on inspection of the dataset directory, I decide that the URI template is
+
+http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag/$Y/geotailmagP$Y$m.dat
+
+I could enter this in Autoplot and it would give me a GUI for selecting the columns that I want to plot and I could plot it over an arbitrary time range.  (I would need to manually determine the column labels as the data files do not contain a header.)
+
+Now all that I need is to use this <code>DD</code> string:
+
+ <nowiki>uri=http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag/$Y/geotailmagP$Y$m.dat</nowiki>
+
+with the TSDSFE service by appending the DD string to <nowiki>http://localhost:8004/#</nowiki> and enter the following into a browser (link does not work for reasons described below)
+
+ <nowiki>http://localhost:8004/#uri=http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag/$Y/geotailmagP$Y$m.dat</nowiki>
+
+Internally, TSDSFE has created a TSDS Catalog based on this information by inpecting the directory tree starting at
+ http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag/
+to find the start/end time of the granules and the timeformat for each granule by looking to see if the first few columns look like a sensible timeformat. (In reality, one would want to specify the timeformat in the string, but for quick tests the capability of omitting it is useful.)
+
+The error is due to the fact that files from [http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag/1993/geotailmagP199310.dat the start file] (1993-10) through [http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag/2007/ the file] (2007-05), the timeformat is <code>$Y $m $d $H $M $S</code> and then starting at [http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag/2007/geotailmagP200706.dat the file 2007-06] the timeformat is <code>$d $m $Y $H $M $S</code>.  For this reason, I will need to treat <code>weimer/Geotail/mag</code> as two datasets instead of one.  In addition, instead of automatically determining the start/end time of the datasets (to future-protect against time coverage expansion or contraction), I will hard-wire the stop time the first part of the full dataset; the start time will be determined by code inspecting the directory.
+
+Note also that the [http://vmo.nasa.gov/mission/metadata/VMO/NumericalData/Weygand/Geotail/MGF/Processed/GSM/PT60S.xml SPASE record] claims
+
+<pre>
+<TemporalDescription>
+  <TimeSpan>
+    <StartDate>1992-09-01T00:00:00.000</StartDate>
+    <StopDate>2010-07-31T23:59:00.000</StopDate>
+  <Note>
+    Time format in data files is: Day Month Year Hour Minute Second (DD MM YYYY HH MM SS.SSS)
+  </Note>
+  </TimeSpan>
+</TemporalDescription>
+</pre>
+
+A few notes:
+* My code found that the StartDate of the data set is <code>1993-10-01T04:00:00.000</code> whereas the SPASE record claims <code>1992-09-01T00:00:00.000</code>
+* My code found that the StopDate of the data set is <code>2015-01-01T04:59:00.000Z</code> whereas the SPASE record claims <code>2010-07-31T23:59:00.000</code>
+* The SPASE record has a note that says the timeformat is <code>DD MM YYYY HH MM SS.SSS</code> - this used the Java date notation whereas the [http://tsds.org/uri_templates URITemplates] document uses Unix date notation (<code>%d %m %Y %H %M %S</code>.  We should decided on using only one set of notation for SPASE records.
+* I found the [http://vmo.nasa.gov/mission/metadata/VMO/NumericalData/Weygand/Geotail/MGF/Processed/GSM/PT60S.xml SPASE record] by searching https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#safe=off&q=%22Weygand%2FPropagatedSolarWindGSM%2Fweimer%2FGeotail%2F%22+spase - it could be that a more correct version exists but is not indexed by Google.  (This would be a Very Bad thing.)
+* The [http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag/header4dat dataset README] has different variable names than that in the [http://vmo.nasa.gov/mission/metadata/VMO/NumericalData/Weygand/Geotail/MGF/Processed/GSM/PT60S.xml SPASE record]. I personally think it is important to allow a mapping from the the original data provider's variable naming to one used in SPASE.  I think it is impudent for a SPASE author to decide to over-ride an author's original naming of a parameter without referenecing the fact that he did it.  I see this often in SPASE records where the SPASE author is different from the data set author.  Here, strangely, the data set and oringial metadata creator is also the author of the SPASE record.
+
+Because of start/end time issue described above, the DD string needs to be constrained to be:
+
+<nowiki>uri=http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag/$Y/geotailmagP$Y$m.dat&timeFormat&start=2007-06-01&timeFormat=$d $m $Y $H $M $S.$(millis)</nowiki>
+
+I append this string to <nowiki>http://localhost:8004/#</nowiki> and enter the following into a browser
+
+ http://localhost:8004/#uri=http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag/$Y/geotailmagP$Y$m.dat&timeFormat&start=2007-06-01&timeFormat=$d $m $Y $H $M $S.$(millis)
+
+When the above URL was entered in the browser, it sent the query string to the TSDS server, which created a TSDS catalog.  To view the catalog that was created and that the GUI is now working with, select the link named "Catalog configuration" near the bottom of the page in the Catalog section.  Note that the catalog created has one data set with id=<code>1</code> and one parameter with id=<code>1</code> (it assumed the first non-time column was the only parameter and gave it a name of <code>1</code>; in principle it could detect all columns).
+
+This above DD is the minimal amount of information that I needed to start serving numbers for one of the datasets in the database (for non-ASCII files, a bit more additional information would be needed for services - more on that in another demonstration).
+
+Next, I selected and output format of <code>ascii-0</code> from the GUI and verified that the first non-fill line returned 
+
+ 30 12 2014 15 28 00.000 5.175e+00
+
+is found in the source file found by selecting the [http://localhost:8004/catalog=Weygand/PropagatedSolarWindGSM&dataset=weimer/Geotail/mag&parameters=Bx-GSM&start=-P3D&stop=2015-01-01&return=urilist&attach=false urilist link] in the GUI, which shows the list of URLs used to fulfill a request over a time range.  There is only [http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag/2014/geotailmagP201412.dat one file] in this case, and I CTRL+F searched it for the timestamp <code>30 12 2014 15 28</code>. 
+
+== 2. ==
+
+I considered [[http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag/header4dat the dataset README] and the [http://vmo.nasa.gov/mission/metadata/VMO/NumericalData/Weygand/Geotail/MGF/Processed/GSM/PT60S.xml SPASE record] to find parameter names.
+
+I decided to use those in the SPASE record because they did not have spaces: <code>Bx-GSM</code>, <code>By-GSM</code>, <code>Bz-GSM</code>, <code>x-GSM</code>, <code>y-GSM</code>, <code>z-GSM</code> because variable IDs in a TSDS Catalog may not have spaces and certain other characters; in the future, I'll use the README variable names as the variable names in the TSDS Catalog to avoid being impudent.
+
+Next I append to the previous <code>DD</code> string additional information:
+
+ &dataColumns=7,8,9,10,11,12&columnIDs=Bx-GSM&By-GSM&Bz-GSM&x-GSM&y-GSM&z-GSM&catalogLabel=Weigand SW Propagation Data Set&datasetID=Weygand/PropagatedSolarWind
+
+and finally append this to the URL used in [[#1.]]:
+
+ http://localhost:8004/#uri=http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag/$Y/geotailmagP$Y$m.dat&timeFormat&start=2007-06-01&timeFormat=$d $m $Y $H $M $S.$(millis)&columns=7,8,9,10,11,12&columnIDs=Bx-GSM,By-GSM,Bz-GSM,x-GSM,y-GSM,z-GSM&columnUnits=nT,nT,nT,Re,Re,Re&columnFills=1e34&catalogLabel=Weigand SW Propagation Data Set&datasetID=Weygand/PropagatedSolarWind
+
+and inpsect the GUI and use it to form requests for data.  Of course, this URL is getting a bit cumbersome and we have still only described one dataset in the database with this method.  This "DD" method is useful for quick checks of a single data set and follows the style used by Autoplot in adding modifiers to a URL in order to add additional information about the dataset so that a scientifically sensible plot can be made.
+
+It is also useful for looking at the dataset node in the [http://localhost:8004/catalogs/Weygand/PropagatedSolarWind/weimer/Geotail/GSM/mag/PT60S.json internally generated TSDS catalog] that was generated by the DD as a template for step 3.
+
+== 3. ==
+
+To begin work on the full database, I started inspecting http://vmo.igpp.ucla.edu/data1/Weygand/, which has subdirectories of
+
+ProcessedSolarWindGSE/
+ProcessedSolarWindGSM/
+PropagatedSolarWindGSE/
+PropagatedSolarWindGSM/
+
+I'll start the last one, which contains the dataset used previously and has a directory structure of
+
+  PropagatedSolarWindGSM/
+    parallel/
+      ACE/
+      Geotail/
+      IMP8/
+      ISEE1/
+      ISEE2/
+      ISEE3/
+      Wind/
+    weimer/
+      Geotail/
+        mag/
+        mag_cpi/
+        plasma/
+        plasma_cpi/
+      Wind/
+        mag/
+        mag_swe/
+        plasma/
+        swe/
+        ace/
+        imp8/
+        isee1/
+        isee2/
+    ...
+
+''Note the inconsistent use of capitialization for S/C names''.
+
+''NB: It would be very helpful if the READMEs in these directories pointed to the SPASE records and vice-versa.''
+
+The DDs were used to generate a baseline TSDS catalog and then the baseline catalog was enhanced with a small amount of code (this is not always the method used for generating a TSDS Catalog, but was in this case).
+
+The basic approach was to write a DD for each bottom-level directory using the method in [[#2.]], combine all of the dataset nodes into a single catalog, and then add additional dataset documentation information in a post-processing step.  Below are the DDs that were used by code for all of the datasets under <code>weimer/Geotail/</code> along with links to other documentation that was found by inpecting the directory tree or doing Google searches:
+
+  weimer/
+    Geotail/
+      mag/
+        - header4dat
+        - (derived) DD1: 
+        - (derived) DD2:
+        - (found) SPASE: http://vmo.nasa.gov/mission/metadata/VMO/NumericalData/Weygand/Geotail/MGF/Processed/GSM/PT60S.xml
+      mag_cpi/
+        - No header4dat file.  Found parameters by looking at variable names in MATLAB binaries posted alongside of ASCII files.  Parameter names are same as mag/.  Not sure what difference is.  Has same problem with change in timeformat as mag/
+        - DD:
+        - (could not find) SPASE.
+      plasma/
+        - header4dat
+        - DD:
+        - (could not find) SPASE.
+      plasma_cpi/
+        - No header4dat
+        - DD:
+        - (found) SPASE: http://vmo.nasa.gov/mission/metadata/VMO/NumericalData/Weygand/Geotail/CPI/Propagated.CPI/GSM/PT60S.xml but it points to a dead link! http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/cpi_cpi (should end in plasma_cpi)
+
+Based on inpection of SPASE records, I decided it would be easiest to 
+* write code to generate the TSDS Catalog than to write code to extract info from SPASE records;
+* write additional code/metadata to supplement what is found in a SPASE (and to write code to verify that that what is in a SPASE record is consistent with that found in directories);
+* In the TSDS catalog has pointers to the URL to the definitive SPASE record and the header4dat files so that the user will need to use combine the informaion as needed to learn about the dataset.
+== 4. ==
+
+I would query a (hypotetical) service 
+
+ http://spase.org/?catalog=spase://VMO/NumericalData/Weygand/
+or
+ http://spase.org/?database=spase://VMO/NumericalData/Weygand/
+
+and get a list of datasets under Weygand, such as
+
+ spase://VMO/NumericalData/Weygand/Geotail/mag
+ spase://VMO/NumericalData/Weygand/Geotail/mag_cpi
+ spase://VMO/NumericalData/Weygand/Geotail/plasma
+ spase://VMO/NumericalData/Weygand/Geotail/plasma_cpi
+ spase://VMO/NumericalData/Weygand/Wind/mag
+ spase://VMO/NumericalData/Weygand/Wind/mag_cpi
+ spase://VMO/NumericalData/Weygand/Wind/plasma
+ spase://VMO/NumericalData/Weygand/Wind/swe
+ ...
+
+and within each of the above SPASE records would be a [http://tsds/org/ URI Template].
+
+I could then use this SPASE service to do everything in [[#3.]] above ''provided that the SPASE record had structure information as in the SPASE record considered here (which is rare)''.
+
+Note that by default I would ignore the start/stop times in the SPASE records because datasets often expand long before the SPASE record is updated.
+
+This procedure applies to datasets obtainable from files; the service case is a bit more complicated but do-able.
+
+= Discussion =
+
+I think that there are the following core activities:
+
+# Finalize the TSDS + TSDSFE reference implementation.
+# Autoplot maintenance of core parts used by TSDS/TSDSFE (file readers and plot servlet at minimum).
+# Development and finalization of how to map to/from TSDS Catalog to SPASE.  Writing SPASE records that can be easily used by TSDS using the procedure in [[#4.]]; writing code to auto-update and auto-generate SPASE records.
+# Development of a workflow for organizing and communicating with all of the data providers who maintaian servers or servies used by TSDS + TSDSFE (could be informal, similar to how Jeremy has monthly meetings with CDAWeb group).  For example, if people started using the Weygand dataset though TSDSFE, we would need coordination/communication with Todd if he made changes to the dataset or if we encountered inconsisencies that should be addressed.
+# Finalization of the [http://tsds.org/dd DD specification].  This would probably take about as much effort as [http://tsds.org/dd URI Template specification].  I am not sure how relevant this is for SPASE.  It is useful for TSDSFE communication with Autoplot, but I am not sure where else it would be used.

@@ -1,0 +1,13 @@
+{
+	"name": "intermagnet",
+  	"version": "0.1.0",
+	"dependencies": {
+		"xml2js"   : "*",
+		"request"  : "*",
+		"moment"   : "*",
+		"unzip"    : "*",
+		"zlib"     : "*",
+		"jsdom"    : "*",
+		"express"  : "3.1.0"
+	}
+}

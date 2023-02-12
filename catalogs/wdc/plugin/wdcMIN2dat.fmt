@@ -1,0 +1,47 @@
+DIGITAL WDC EXCHANGE FORMAT FOR OBSERVATORY 1-MINUTE VALUES
+
+Magnetic data organized in 1-month files, with the information coded in ASCII.
+
+
+COLUMNS   FORMAT   DESCRIPTION
+
+1-6       I6       Observatory's North Polar distance.  
+                   0ø to 180ø from the north geographic pole in thousandths 
+                   of a degree. Decimal point is implied between positions 3 
+                   and 4.
+7-12      I6       Observatory's Geographic longitude.  
+                   0ø to 360ø measured east from Greenwich in thousandths 
+                   of a degree. Decimal point is implied between positions 9 
+                   and 10.
+13-14     I2       Year. Last 2 digits, 1996 = 96. See also column 26.
+15-16     I2       Month (01-12)
+17-18     I2       Day of month (01-31)
+19        Al       Element (D,I,H,X,Y,Z, or F)
+20-21     I2       Hour of day (00-23)
+22-24     A3       Observatory 3-letter code.
+25        A1       Arbitrary.
+26        I1       Century digit.
+                   Year = 2014, Century digit = 0.
+                   Year = 1889, Century digit = 8.
+                   Year = 1996, Century digit = 9 or 'SPACE' for backwards
+                   compatibility.
+27        A1       Preliminary or Definitive data.
+                   Preliminary = P , Definitive = D
+28-34     A7       Blanks
+35-394    60I6     60 6-digit 1-minute values for the given element for that
+                   data hour.
+                   The values are in tenth-minutes for D and I, and in
+                   nanoTeslas for the intensity elements.
+395-400   I6       Hourly Mean.
+                   The average of the preceeding 60 1-minute values.
+401-402            Record end marker.
+                   Two chars 'cr'= 13 and 'nl'= 10.
+
+Each element value and the hourly mean is given in a 6-digit field including
+a minus sign for negative values.
+
+Missing data value spaces are padded with 999999.
+
+The records are sorted according to observatory code, year, month, day,
+element.
+

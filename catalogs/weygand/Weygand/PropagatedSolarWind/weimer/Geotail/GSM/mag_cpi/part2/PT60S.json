@@ -1,0 +1,107 @@
+{
+    "catalog": {
+        "$": {
+            "xmlns:xlink": "http://www.w3.org/1999/xlink",
+            "id": "Weygand/PropagatedSolarWind",
+            "name": "Weygand SW Propagation Data Set"
+        },
+        "dataset": [
+            {
+                "$": {
+                    "id": "weimer/Geotail/GSM/mag_cpi/part2",
+                    "timecolumns": "1-6",
+                    "timeformat": "$d $m $Y $H $M $S.$(millis)",
+                    "urltemplate": "http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag_cpi/$Y/geotailmagP$Y$m.dat",
+                    "name": "weimer/Geotail/GSM/mag_cpi/part2",
+                    "fillvalue": "1e34"
+                },
+                "timeCoverage": [
+                    {
+                        "Start": [
+                            "2011-01-01"
+                        ],
+                        "End": [
+                            "2015-01-01T04:59:00.000Z"
+                        ]
+                    }
+                ],
+                "variables": [
+                    {
+                        "variable": [
+                            {
+                                "$": {
+                                    "columns": "7",
+                                    "id": "Bx-GSM",
+                                    "units": "nT",
+                                    "label": "Bx-GSM"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "columns": "8",
+                                    "id": "By-GSM",
+                                    "units": "nT",
+                                    "label": "By-GSM"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "columns": "9",
+                                    "id": "Bz-GSM",
+                                    "units": "nT",
+                                    "label": "Bz-GSM"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "columns": "10",
+                                    "id": "x-GSM",
+                                    "units": "Re",
+                                    "label": "x-GSM"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "columns": "11",
+                                    "id": "y-GSM",
+                                    "units": "Re",
+                                    "label": "y-GSM"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "columns": "12",
+                                    "id": "z-GSM",
+                                    "units": "Re",
+                                    "label": "z-GSM"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "documentation": [
+                    {
+                        "$": {
+                            "xlink:href": "http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag/header4dat",
+                            "xlink:title": "Metadata found in dataset directory."
+                        }
+                    },
+                    {
+                        "$": {
+                            "xlink:href": "http://vmo.nasa.gov/mission/metadata/VMO/NumericalData/Weygand/Geotail/MGF/Processed/GSM/PT60S.xml",
+                            "xlink:title": "SPASE record for dataset."
+                        }
+                    }
+                ]
+            }
+        ],
+        "documentation": [
+            {
+                "$": {
+                    "xlink:href": "http://www.igpp.ucla.edu/jweygand/htmls/Propagated_SW.html",
+                    "xlink:title": "Solar Wind Propagation Information"
+                }
+            }
+        ]
+    }
+}

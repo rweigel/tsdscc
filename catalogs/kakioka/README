@@ -1,0 +1,82 @@
+Kakioka geomagnetic field
+
+Average 1-hour (00-59)  
+from 1924-01-31T15:00:00 to 1 month ago (-P1M)
+Geomagnetic field (KAK)
+definitive
+DHZF
+
+Average 1-hour (00-59)  
+from 1913-01-08T15:00:00 to 1916-12-31T14:00:00
+Geomagnetic field (KAK)
+definitive
+DHZF
+
+Average 1-minute (00:30-01:29)  
+from 1976-01-01T00:00:00 to 1 month ago (-P1M)
+Geomagnetic field (KAK)
+definitive
+DHZF
+
+Average 1-minute (00:30-01:29)  
+from 1964-01-01T00:00:00 to 1975-12-31T23:59:00
+Geomagnetic field digitized from magnetograms (KAK)
+quasi-definitive
+DHZF
+
+1-second (instantaneous)  
+from 1993-04-01T00:00:00 to 1 month ago (-P1M)
+Geomagnetic field (KAK)
+definitive
+DHZF or XYZF
+
+1-decisecond (instantaneous)  
+from 1997-06-01T00:00:00 to 1 month ago (-P1M)
+Geomagnetic field (KAK)
+variation
+XYZF
+
+http://www.kakioka-jma.go.jp/metadata/orders/new?id=864&locale=en
+
+Extract authenticity_token
+<meta content="qpP6L7P6asIceqigmR2odIPj4MAC+RafTDQP2Qlz9n0=" name="csrf-token" />
+
+http://www.kakioka-jma.go.jp/metadata/orders/new?id=864&locale=en
+
+utf8:✓
+authenticity_token:5LuFy2uPwDBYtWqP4n+eoQnURdZiRsvmKhf//ArEy/Q=
+order[Data_num]:1143
+order[Name]:Geomagnetic field
+order[Station]:Kakioka Magnetic Observatory
+order[IAGA_code]:KAK
+order[Interval]:1-decisecond (instantaneous)
+order[Type]:variation
+order[start_line]:1997-06-01
+order[dead_line]:2015-01-31
+order[email]:rweigel@gmu.edu
+order[Research_field]:Space Physics
+order[Start_date(1i)]:1997
+order[Start_date(2i)]:6
+order[Start_date(3i)]:1
+order[End_date(1i)]:1997
+order[End_date(2i)]:6
+order[End_date(3i)]:1
+order[Confirm]:0
+order[Confirm]:1
+commit:Submit
+
+http://www.kakioka-jma.go.jp/metadata/orders/dsfile_create?locale=en
+utf8:✓
+authenticity_token:5LuFy2uPwDBYtWqP4n+eoQnURdZiRsvmKhf//ArEy/Q=
+START_DATE:1997-06-01
+END_DATE:1997-06-01
+DATA_NUM:1143
+IAGA_CODE:KAK
+commit:Create file
+
+Wait for response
+
+http://www.kakioka-jma.go.jp/metadata/orders/dlfile?locale=en
+utf8:✓
+authenticity_token:5LuFy2uPwDBYtWqP4n+eoQnURdZiRsvmKhf//ArEy/Q=
+commit:download

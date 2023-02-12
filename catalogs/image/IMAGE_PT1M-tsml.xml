@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalog xmlns:xlink="http://www.w3.org/1999/xlink" id="IMAGE/PT1M" name="IMAGE magnetometer data at 1-minute cadence">
+  <documentation xlink:href="http://space.fmi.fi/" xlink:title="IMAGE web page"/>
+  <documentation xlink:href="http://github.com/tsds/tsds2/tree/gh-pages/tsdscc/catalogs/image" xlink:title="Catalog generation software"/>
+  <documentation xlink:href="/" xlink:title="Catalog generation date: 2015-07-10T21:26:35.818Z"/>
+  <documentation xlink:href="http://space.fmi.fi/image/rulesofroad.html" xlink:title="Conditions of use and acknowledgement of IMAGE data"/>
+  <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="IMAGE data providers"/>
+  <dataset id="ABK" name="Abiskos" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/ABK/PT1M/$Y$m$dABK.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1998-01-01</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="ABK X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="ABK Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="ABK Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="ALT" name="Altas" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/ALT/PT1M/$Y$m$dALT.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1982-10-02</Start>
+      <End>1991-08-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="ALT X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="ALT Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="ALT Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="AND" name="Andeness" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/AND/PT1M/$Y$m$dAND.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1996-01-01</Start>
+      <End>2014-10-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="AND X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="AND Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="AND Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="BJN" name="Bear Island" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/BJN/PT1M/$Y$m$dBJN.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1993-10-01</Start>
+      <End>2014-10-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="BJN X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="BJN Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="BJN Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="DOB" name="Dombåss" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/DOB/PT1M/$Y$m$dDOB.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>2000-01-01</Start>
+      <End>2014-10-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="DOB X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="DOB Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="DOB Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="DON" name="Dønnas" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/DON/PT1M/$Y$m$dDON.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>2007-11-01</Start>
+      <End>2014-10-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="DON X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="DON Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="DON Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="HAN" name="Hankasalmi" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/HAN/PT1M/$Y$m$dHAN.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1992-08-01</Start>
+      <End>2014-11-30</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="HAN X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="HAN Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="HAN Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="HOP" name="Hopen Island" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/HOP/PT1M/$Y$m$dHOP.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1993-10-01</Start>
+      <End>2014-10-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="HOP X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="HOP Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="HOP Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="HOR" name="Hornsund" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/HOR/PT1M/$Y$m$dHOR.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1993-10-01</Start>
+      <End>2014-08-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="HOR X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="HOR Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="HOR Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="IVA" name="Ivalos" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/IVA/PT1M/$Y$m$dIVA.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>2001-01-01</Start>
+      <End>2014-11-30</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="IVA X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="IVA Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="IVA Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="JCK" name="Jäckviks" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/JCK/PT1M/$Y$m$dJCK.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>2010-09-01</Start>
+      <End>2014-10-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="JCK X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="JCK Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="JCK Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="KAR" name="Karmøys" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/KAR/PT1M/$Y$m$dKAR.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>2004-01-01</Start>
+      <End>2014-10-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="KAR X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="KAR Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="KAR Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="KAU" name="Kautokeino" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/KAU/PT1M/$Y$m$dKAU.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1982-10-01</Start>
+      <End>1991-05-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="KAU X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="KAU Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="KAU Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="KEV" name="Kevos" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/KEV/PT1M/$Y$m$dKEV.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1983-06-01</Start>
+      <End>2014-11-30</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="KEV X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="KEV Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="KEV Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="KIL" name="Kilpisjärvi" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/KIL/PT1M/$Y$m$dKIL.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1983-06-01</Start>
+      <End>2014-11-30</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="KIL X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="KIL Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="KIL Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="KIR" name="Kirunas" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/KIR/PT1M/$Y$m$dKIR.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1996-01-01</Start>
+      <End>2014-10-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="KIR X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="KIR Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="KIR Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="LEK" name="Lekness" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/LEK/PT1M/$Y$m$dLEK.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>2000-01-01</Start>
+      <End>2005-11-30</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="LEK X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="LEK Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="LEK Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="LOZ" name="Lovozero" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/LOZ/PT1M/$Y$m$dLOZ.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1994-10-01</Start>
+      <End>2008-12-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="LOZ X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="LOZ Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="LOZ Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="LYC" name="Lycksele" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/LYC/PT1M/$Y$m$dLYC.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1998-07-01</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="LYC X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="LYC Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="LYC Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="LYR" name="Longyearbyen" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/LYR/PT1M/$Y$m$dLYR.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1993-10-01</Start>
+      <End>2014-10-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="LYR X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="LYR Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="LYR Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="MAS" name="Masis" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/MAS/PT1M/$Y$m$dMAS.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1991-09-01</Start>
+      <End>2014-11-30</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="MAS X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="MAS Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="MAS Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="MEK" name="Mekrijärvi" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/MEK/PT1M/$Y$m$dMEK.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>2004-10-02</Start>
+      <End>2014-11-30</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="MEK X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="MEK Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="MEK Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="MUO" name="Muonios" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/MUO/PT1M/$Y$m$dMUO.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1982-10-01</Start>
+      <End>2014-11-30</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="MUO X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="MUO Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="MUO Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="NAL" name="Ny Ålesund" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/NAL/PT1M/$Y$m$dNAL.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1993-10-01</Start>
+      <End>2014-10-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="NAL X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="NAL Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="NAL Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="NOR" name="Nordkapp" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/NOR/PT1M/$Y$m$dNOR.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>2007-10-01</Start>
+      <End>2014-10-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="NOR X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="NOR Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="NOR Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="NUR" name="Nurmijärvi" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/NUR/PT1M/$Y$m$dNUR.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1992-01-01</Start>
+      <End>2014-11-30</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="NUR X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="NUR Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="NUR Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="OUJ" name="Oulujärvi" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/OUJ/PT1M/$Y$m$dOUJ.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1992-11-01</Start>
+      <End>2014-11-30</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="OUJ X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="OUJ Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="OUJ Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="PEL" name="Pellos" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/PEL/PT1M/$Y$m$dPEL.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1982-10-01</Start>
+      <End>2014-11-30</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="PEL X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="PEL Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="PEL Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="RAN" name="Rørviks" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/RAN/PT1M/$Y$m$dRAN.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>2014-10-01</Start>
+      <End>2014-11-30</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="RAN X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="RAN Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="RAN Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="RVK" name="Rørviks" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/RVK/PT1M/$Y$m$dRVK.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1999-09-01</Start>
+      <End>2014-10-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="RVK X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="RVK Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="RVK Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="SOD" name="Sodankylä" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/SOD/PT1M/$Y$m$dSOD.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1982-10-01</Start>
+      <End>2014-11-30</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="SOD X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="SOD Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="SOD Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="SOL" name="Solunds" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/SOL/PT1M/$Y$m$dSOL.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>2007-03-01</Start>
+      <End>2014-10-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="SOL X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="SOL Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="SOL Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="SOR" name="Sørøyas" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/SOR/PT1M/$Y$m$dSOR.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1982-10-01</Start>
+      <End>2014-10-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="SOR X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="SOR Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="SOR Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="TAR" name="Tartus" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/TAR/PT1M/$Y$m$dTAR.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>2001-09-01</Start>
+      <End>2014-11-30</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="TAR X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="TAR Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="TAR Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="TRO" name="Tromsøs" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/TRO/PT1M/$Y$m$dTRO.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1993-10-01</Start>
+      <End>2014-10-31</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="TRO X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="TRO Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="TRO Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+  <dataset id="UPS" name="Uppsalas" label="Data source institute: http://space.fmi.fi/image/contributors.html" timecolumns="1,2,3,4,5,6" timeformat="$Y,$m,$d,$H,$M,$S" urltemplate="mirror:http://space.fmi.fi/UPS/PT1M/$Y$m$dUPS.col2.gz" lineregex="^[0-9]">
+    <documentation xlink:href="http://space.fmi.fi/image/contributors.html" xlink:title="Observatory Information"/>
+    <timeCoverage>
+      <Start>1998-01-01</Start>
+      <End>2014-09-30</End>
+      <Cadence>PT1M</Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="XYZ" name="XYZ components" type="vector"/>
+    </groups>
+    <variables>
+      <variable id="X" name="X" label="UPS X" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="7"/>
+      <variable id="Y" name="Y" label="UPS Y" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="8"/>
+      <variable id="Z" name="Z" label="UPS Z" units="nT" type="scalar" fillvalue="99999.0" rendering="%.1f" columns="9"/>
+    </variables>
+  </dataset>
+</catalog>

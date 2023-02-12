@@ -1,0 +1,167 @@
+{
+    "catalog": {
+        "$": {
+            "xmlns:xlink": "http://www.w3.org/1999/xlink",
+            "id": "Weygand/PropagatedSolarWindGSM",
+            "name": "Weygand SW Propagation Data Set"
+        },
+        "documentation": [
+            {
+                "$": {
+                    "xlink:href": "http://tsds.org/dd/",
+                    "xlink:title": "Catalog derived from DD string uri=http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag/$Y/geotailmagP$Y$m.dat&timeFormat&start=2007-06-01&timeFormat=$d $m $Y $H $M $S.$(millis)&catalogID=Weygand/PropagatedSolarWindGSM&catalogLabel=Weygand SW Propagation Data Set&datasetID=weimer/Geotail/mag&columns=7,8,9,10,11,12&columnIDs=Bx-GSM,By-GSM,Bz-GSM,x-GSM,y-GSM,z-GSM&columnUnits=nT,nT,nT,Re,Re,Re&fillValues=1e34"
+                }
+            }
+        ],
+        "dataset": [
+            {
+                "$": {
+                    "id": "weimer/Geotail/mag/part1",
+                    "timecolumns": "1-6",
+                    "timeformat": "$Y $m $d $H $M $S.$(millis)",
+                    "urltemplate": "http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag/$Y/geotailmagP$Y$m.dat",
+                    "name": "weimer/Geotail/mag/part1",
+                    "fillvalue": "NaN"
+                },
+                "timeCoverage": [
+                    {
+                        "Start": [
+                            "1993-10-01T04:00:00.000Z"
+                        ],
+                        "End": [
+                            "2007-05-31T23:59:00.000Z"
+                        ]
+                    }
+                ],
+                "variables": [
+                    {
+                        "variable": [
+                            {
+                                "$": {
+                                    "columns": "7",
+                                    "id": "Bx-GSM",
+                                    "units": "nT",
+                                    "label": "Bx-GSM"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "columns": "8",
+                                    "id": "By-GSM",
+                                    "units": "nT",
+                                    "label": "By-GSM"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "columns": "9",
+                                    "id": "Bz-GSM",
+                                    "units": "nT",
+                                    "label": "Bz-GSM"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "columns": "10",
+                                    "id": "x-GSM",
+                                    "units": "Re",
+                                    "label": "x-GSM"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "columns": "11",
+                                    "id": "y-GSM",
+                                    "units": "Re",
+                                    "label": "y-GSM"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "columns": "12",
+                                    "id": "z-GSM",
+                                    "units": "Re",
+                                    "label": "z-GSM"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$": {
+                    "id": "weimer/Geotail/mag/part2",
+                    "timecolumns": "1-6",
+                    "timeformat": "$d $m $Y $H $M $S.$(millis)",
+                    "urltemplate": "http://vmo.igpp.ucla.edu/data1/Weygand/PropagatedSolarWindGSM/weimer/Geotail/mag/$Y/geotailmagP$Y$m.dat",
+                    "name": "weimer/Geotail/mag/part2",
+                    "fillvalue": "1e34"
+                },
+		        "timeCoverage": [
+		            {
+		                "Start": [
+		                    "2007-06-01"
+		                ],
+		                "End": [
+		                    "2015-01-01T04:59:00.000Z"
+		                ]
+		            }
+		        ],
+                "variables": [
+                    {
+                        "variable": [
+                            {
+                                "$": {
+                                    "columns": "7",
+                                    "id": "Bx-GSM",
+                                    "units": "nT",
+                                    "label": "Bx-GSM"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "columns": "8",
+                                    "id": "By-GSM",
+                                    "units": "nT",
+                                    "label": "By-GSM"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "columns": "9",
+                                    "id": "Bz-GSM",
+                                    "units": "nT",
+                                    "label": "Bz-GSM"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "columns": "10",
+                                    "id": "x-GSM",
+                                    "units": "Re",
+                                    "label": "x-GSM"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "columns": "11",
+                                    "id": "y-GSM",
+                                    "units": "Re",
+                                    "label": "y-GSM"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "columns": "12",
+                                    "id": "z-GSM",
+                                    "units": "Re",
+                                    "label": "z-GSM"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

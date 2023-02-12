@@ -1,0 +1,56 @@
+{
+	"catalog": 
+	{ 
+		"$": {
+				"id": "USGS/Dst/RT/PT1M",
+				"name": "Real Time Dst from USGS; 1-minute cadence."
+			},
+		"documentation": 
+						[
+							{
+							"$":
+								{
+							 		"xlink:href":"http://magweb.cr.usgs.gov/data/magnetometer/",
+							 		"xlink:title":"Catalog derived from inspection of http://magweb.cr.usgs.gov/data/indices/beta/Dst_minute/"
+								}
+							},
+							{
+							"$":
+								{
+							 		"xlink:href": "http://github.com/tsds/tsds2/tsdscc/catalogs/usgs",
+							 		"xlink:title": "Catalog generation program."
+								}
+							},								
+							{
+							"$":
+								{
+							 		"xlink:title": "/",
+							 		"xlink:title": "Catalog generation date: "
+								}
+							}								
+			 			],
+		"dataset": 	
+					[
+						{
+							"$":
+								{
+							 		"id":"Dst",
+							 		"name":"Real-time Dst",
+							 		"label":"Real-time Dst; one-minute cadence",
+							 		"timecolumns":"1,2",
+							 		"timeformat":"$Y-$m-$d,$H:$M:$S.$(millis)",
+							 		"lineregex":"^[0-9]",
+							 		"urltemplate":"http://magweb.cr.usgs.gov/data/magnetometer/$1/OneMinute/$2$Y$m$dvmin.min"
+								},
+							"timeCoverage": {"Start":"","End":""},
+							"groups": {"group":{"$": {"id":"H,D,Z", "name":"$1 HDZ components", "label":"$1 HDZ components", "type":"vector"}}},
+							"variables": {
+											"variable": [
+															{"$":{"id":"DOY", "name":"Day of Year", "label":"DOY", "units":"Gregorian","type":"scalar","fillvalue":"","rendering":"%j","columns":"3"}},
+														 	{"$":{"id":"DST_RT", "name":"Real-time Dst", "label":"Real-time Dst; one-minute cadence", "units":"nT","type":"scalar","fillvalue":"99999.00","rendering":"%.2f","columns":"4"}}
+														 ]
+										}
+						}
+					]
+	}
+}

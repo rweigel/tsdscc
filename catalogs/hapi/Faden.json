@@ -1,0 +1,565 @@
+{
+    "catalog": {
+        "$": {
+            "id": "Faden"
+        },
+        "dataset": [
+            {
+                "$": {
+                    "id": "0B000800408DD710",
+                    "urltemplate": "http://jfaden.net/HapiServerDemo/hapi/data%3Fid=0B000800408DD710%26time.min=$Y-$m-$d%26time.max=${Y;offset=0}-${m;offset=0}-${d;offset=1}",
+                    "delim": ",",
+                    "lineregex": "^[0-9][0-9][0-9][0-9]"
+                },
+                "timeCoverage": [
+                    {
+                        "Start": [
+                            "2012-01-09T00:00Z"
+                        ],
+                        "End": [
+                            "2017-02-21T15:08Z"
+                        ],
+                        "Cadence": []
+                    }
+                ],
+                "variables": [
+                    {
+                        "variable": [
+                            {
+                                "$": {
+                                    "id": "Time",
+                                    "name": "Time",
+                                    "columns": "1"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "Temperature",
+                                    "name": "Temperature",
+                                    "label": "temperature in garage, car",
+                                    "units": "deg F",
+                                    "columns": "2"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$": {
+                    "id": "0B000800408DD710.noStream",
+                    "urltemplate": "http://jfaden.net/HapiServerDemo/hapi/data%3Fid=0B000800408DD710.noStream%26time.min=$Y-$m-$d%26time.max=${Y;offset=0}-${m;offset=0}-${d;offset=1}",
+                    "delim": ",",
+                    "lineregex": "^[0-9][0-9][0-9][0-9]"
+                },
+                "timeCoverage": [
+                    {
+                        "Start": [
+                            null
+                        ],
+                        "End": [
+                            null
+                        ],
+                        "Cadence": []
+                    }
+                ],
+                "variables": [
+                    {
+                        "variable": [
+                            {
+                                "$": {
+                                    "id": "Time",
+                                    "name": "Time",
+                                    "columns": "1"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "Temperature",
+                                    "name": "Temperature",
+                                    "label": "temperature at sensor 0B000800408DD710.noStream",
+                                    "units": "deg F",
+                                    "columns": "2"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$": {
+                    "id": "8500080044259C10",
+                    "urltemplate": "http://jfaden.net/HapiServerDemo/hapi/data%3Fid=8500080044259C10%26time.min=$Y-$m-$d%26time.max=${Y;offset=0}-${m;offset=0}-${d;offset=1}",
+                    "delim": ",",
+                    "lineregex": "^[0-9][0-9][0-9][0-9]"
+                },
+                "timeCoverage": [
+                    {
+                        "Start": [
+                            "2012-01-09T00:00Z"
+                        ],
+                        "End": [
+                            "2017-02-21T15:08Z"
+                        ],
+                        "Cadence": []
+                    }
+                ],
+                "variables": [
+                    {
+                        "variable": [
+                            {
+                                "$": {
+                                    "id": "Time",
+                                    "name": "Time",
+                                    "columns": "1"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "Temperature",
+                                    "name": "Temperature",
+                                    "label": "temperature in garage, far",
+                                    "units": "deg F",
+                                    "columns": "2"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$": {
+                    "id": "610008002FE00410",
+                    "urltemplate": "http://jfaden.net/HapiServerDemo/hapi/data%3Fid=610008002FE00410%26time.min=$Y-$m-$d%26time.max=${Y;offset=0}-${m;offset=0}-${d;offset=1}",
+                    "delim": ",",
+                    "lineregex": "^[0-9][0-9][0-9][0-9]"
+                },
+                "timeCoverage": [
+                    {
+                        "Start": [
+                            "2012-01-09T00:00Z"
+                        ],
+                        "End": [
+                            "2017-02-21T15:08Z"
+                        ],
+                        "Cadence": []
+                    }
+                ],
+                "variables": [
+                    {
+                        "variable": [
+                            {
+                                "$": {
+                                    "id": "Time",
+                                    "name": "Time",
+                                    "columns": "1"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "Temperature",
+                                    "name": "Temperature",
+                                    "label": "temperature in attic",
+                                    "units": "deg F",
+                                    "columns": "2"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$": {
+                    "id": "AC00080040250510",
+                    "urltemplate": "http://jfaden.net/HapiServerDemo/hapi/data%3Fid=AC00080040250510%26time.min=$Y-$m-$d%26time.max=${Y;offset=0}-${m;offset=0}-${d;offset=1}",
+                    "delim": ",",
+                    "lineregex": "^[0-9][0-9][0-9][0-9]"
+                },
+                "timeCoverage": [
+                    {
+                        "Start": [
+                            "2012-01-09T00:00Z"
+                        ],
+                        "End": [
+                            "2017-02-21T15:08Z"
+                        ],
+                        "Cadence": []
+                    }
+                ],
+                "variables": [
+                    {
+                        "variable": [
+                            {
+                                "$": {
+                                    "id": "Time",
+                                    "name": "Time",
+                                    "columns": "1"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "Temperature",
+                                    "name": "Temperature",
+                                    "label": "temperature at thermostat",
+                                    "units": "deg F",
+                                    "columns": "2"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$": {
+                    "id": "Iowa City Conditions",
+                    "urltemplate": "http://jfaden.net/HapiServerDemo/hapi/data%3Fid=Iowa City Conditions%26time.min=$Y-$m-$d%26time.max=${Y;offset=0}-${m;offset=0}-${d;offset=1}",
+                    "delim": ",",
+                    "lineregex": "^[0-9][0-9][0-9][0-9]"
+                },
+                "timeCoverage": [
+                    {
+                        "Start": [
+                            "2012-05-25T00:00Z"
+                        ],
+                        "End": [
+                            "2017-02-23T15:21Z"
+                        ],
+                        "Cadence": []
+                    }
+                ],
+                "variables": [
+                    {
+                        "variable": [
+                            {
+                                "$": {
+                                    "id": "Time",
+                                    "name": "Time",
+                                    "columns": "1"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "Temperature",
+                                    "name": "Temperature",
+                                    "label": "Air Temperature",
+                                    "units": "deg F",
+                                    "columns": "2"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "WindSpeed",
+                                    "name": "WindSpeed",
+                                    "label": "Wind Speed",
+                                    "units": "mph",
+                                    "columns": "3"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "DewPoint",
+                                    "name": "DewPoint",
+                                    "label": "Dew Point",
+                                    "units": "deg F",
+                                    "columns": "4"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "Humidity",
+                                    "name": "Humidity",
+                                    "label": "Relative Humidity",
+                                    "units": "percent",
+                                    "columns": "5"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "WindChill",
+                                    "name": "WindChill",
+                                    "label": "Wind Chill",
+                                    "units": "deg F",
+                                    "columns": "6"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "HeatIndex",
+                                    "name": "HeatIndex",
+                                    "label": "Heat Index",
+                                    "units": "deg F",
+                                    "columns": "7"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "Altimeter",
+                                    "name": "Altimeter",
+                                    "label": "Altimeter",
+                                    "columns": "8"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "Pressure",
+                                    "name": "Pressure",
+                                    "label": "Barometric Pressure",
+                                    "columns": "9"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "Precip",
+                                    "name": "Precip",
+                                    "label": "Precipitation",
+                                    "columns": "10"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$": {
+                    "id": "Iowa City Forecast",
+                    "urltemplate": "http://jfaden.net/HapiServerDemo/hapi/data%3Fid=Iowa City Forecast%26time.min=$Y-$m-$d%26time.max=${Y;offset=0}-${m;offset=0}-${d;offset=1}",
+                    "delim": ",",
+                    "lineregex": "^[0-9][0-9][0-9][0-9]"
+                },
+                "timeCoverage": [
+                    {
+                        "Start": [
+                            "2012-05-25T00:00Z"
+                        ],
+                        "End": [
+                            "2017-02-23T15:21Z"
+                        ],
+                        "Cadence": []
+                    }
+                ],
+                "variables": [
+                    {
+                        "variable": [
+                            {
+                                "$": {
+                                    "id": "Time",
+                                    "name": "Time",
+                                    "columns": "1"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "Temperature",
+                                    "name": "Temperature",
+                                    "label": "Air Temperature",
+                                    "units": "deg F",
+                                    "columns": "2"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "DewPoint",
+                                    "name": "DewPoint",
+                                    "label": "Dew Point",
+                                    "units": "deg F",
+                                    "columns": "3"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "PrecipProbabily",
+                                    "name": "PrecipProbabily",
+                                    "label": "Probability of Precipitation",
+                                    "units": "%",
+                                    "columns": "4"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "WindSpeed",
+                                    "name": "WindSpeed",
+                                    "label": "Wind Speed",
+                                    "units": "mph",
+                                    "columns": "5"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "WindDirection",
+                                    "name": "WindDirection",
+                                    "label": "Wind Direction",
+                                    "units": "degrees",
+                                    "columns": "6"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$": {
+                    "id": "Spectrum",
+                    "urltemplate": "http://jfaden.net/HapiServerDemo/hapi/data%3Fid=Spectrum%26time.min=$Y-$m-$d%26time.max=${Y;offset=0}-${m;offset=0}-${d;offset=1}",
+                    "delim": ",",
+                    "lineregex": "^[0-9][0-9][0-9][0-9]"
+                },
+                "timeCoverage": [
+                    {
+                        "Start": [
+                            "2012-08-30T00:00Z"
+                        ],
+                        "End": [
+                            null
+                        ],
+                        "Cadence": []
+                    }
+                ],
+                "variables": [
+                    {
+                        "variable": [
+                            {
+                                "$": {
+                                    "id": "Time",
+                                    "name": "Time",
+                                    "columns": "1"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "Spectra",
+                                    "name": "Spectra",
+                                    "label": "spectrogram example that is not for publication.",
+                                    "units": "V^2 m^-2 Hz^-1",
+                                    "columns": "2-83"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$": {
+                    "id": "PowerWheel",
+                    "urltemplate": "http://jfaden.net/HapiServerDemo/hapi/data%3Fid=PowerWheel%26time.min=$Y-$m-$d%26time.max=${Y;offset=0}-${m;offset=0}-${d;offset=1}",
+                    "delim": ",",
+                    "lineregex": "^[0-9][0-9][0-9][0-9]"
+                },
+                "timeCoverage": [
+                    {
+                        "Start": [
+                            "2016-07-28T00:00Z"
+                        ],
+                        "End": [
+                            null
+                        ],
+                        "Cadence": []
+                    }
+                ],
+                "variables": [
+                    {
+                        "variable": [
+                            {
+                                "$": {
+                                    "id": "Time",
+                                    "name": "Time",
+                                    "columns": "1"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "PowerWheel",
+                                    "name": "PowerWheel",
+                                    "label": "The little wheel thingy that spins around.",
+                                    "units": "greyscale",
+                                    "columns": "2-22"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$": {
+                    "id": "SpectrogramRank2",
+                    "urltemplate": "http://jfaden.net/HapiServerDemo/hapi/data%3Fid=SpectrogramRank2%26time.min=$Y-$m-$d%26time.max=${Y;offset=0}-${m;offset=0}-${d;offset=1}",
+                    "delim": ",",
+                    "lineregex": "^[0-9][0-9][0-9][0-9]"
+                },
+                "timeCoverage": [
+                    {
+                        "Start": [
+                            null
+                        ],
+                        "End": [
+                            null
+                        ],
+                        "Cadence": []
+                    }
+                ],
+                "variables": [
+                    {
+                        "variable": [
+                            {
+                                "$": {
+                                    "id": "Time",
+                                    "name": "Time",
+                                    "columns": "1"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "SpectrogramRank2",
+                                    "name": "SpectrogramRank2",
+                                    "label": "Example of rank 2 data.",
+                                    "units": "greyscale",
+                                    "columns": "2-8"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$": {
+                    "id": "PowerOnesDigitSegments",
+                    "urltemplate": "http://jfaden.net/HapiServerDemo/hapi/data%3Fid=PowerOnesDigitSegments%26time.min=$Y-$m-$d%26time.max=${Y;offset=0}-${m;offset=0}-${d;offset=1}",
+                    "delim": ",",
+                    "lineregex": "^[0-9][0-9][0-9][0-9]"
+                },
+                "timeCoverage": [
+                    {
+                        "Start": [
+                            "2016-07-28T00:00Z"
+                        ],
+                        "End": [
+                            null
+                        ],
+                        "Cadence": []
+                    }
+                ],
+                "variables": [
+                    {
+                        "variable": [
+                            {
+                                "$": {
+                                    "id": "Time",
+                                    "name": "Time",
+                                    "columns": "1"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "PowerOnesDigitSegments",
+                                    "name": "PowerOnesDigitSegments",
+                                    "label": "Each of the seven segments of the ones digit seven segment display",
+                                    "units": "greyscale",
+                                    "columns": "2-28"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

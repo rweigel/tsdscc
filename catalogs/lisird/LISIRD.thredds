@@ -1,0 +1,223 @@
+<catalog xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0" xmlns:xlink="http://www.w3.org/1999/xlink" name="LISIRD">
+
+  <service name="tss" serviceType="OpenDAP" base=""/> 
+
+ <dataset name="Total Solar Irradiance (TSI)">
+  <dataset ID="sorce_tsi_24hr" name="SORCE Total Solar Irradiance - Daily Average">
+    <access serviceName="tss" urlPath="sorce_tsi_24hr"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>2003-02-25</Start>
+                <End>2014-02-13</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="sorce_tsi_6hr" name="SORCE Total Solar Irradiance - Six Hour Average">
+    <access serviceName="tss" urlPath="sorce_tsi_6hr"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>2003-02-25</Start>
+                <End>2014-02-13</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="historical_tsi" name="Historical Total Solar Irradiance Reconstruction">
+    <access serviceName="tss" urlPath="historical_tsi"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>1610-06-29</Start>
+                <End>2012-06-28</End>
+            </timeCoverage>
+        </dataset>
+ </dataset>
+ 
+ <dataset name="Solar Spectral Irradiance (SSI)">
+  <dataset ID="sorce_ssi" name="SORCE Solar Spectral Irradiance">
+    <access serviceName="tss" urlPath="sorce_ssi"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>2003-02-25</Start>
+                <End>2013-11-11</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="timed_see_egs_l2" name="TIMED SEE EGS Solar Spectral Irradiance - Level 2">
+    <access serviceName="tss" urlPath="timed_see_egs_l2"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>2002-02-08</Start>
+                <End>2014-02-16</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="timed_see_xps_l2" name="TIMED SEE XPS Diode Irradiance - Level 2">
+    <access serviceName="tss" urlPath="timed_see_xps_l2"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>2002-01-22</Start>
+                <End>2014-02-16</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="timed_see_ssi" name="TIMED SEE Solar Spectral Irradiance - Level 3">
+    <access serviceName="tss" urlPath="timed_see_ssi"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>2002-01-22</Start>
+                <End>2014-02-16</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="timed_see_ssi_l3a" name="TIMED SEE Solar Spectral Irradiance - Level 3A">
+    <access serviceName="tss" urlPath="timed_see_ssi_l3a"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>2002-01-22</Start>
+                <End>2014-02-16</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="timed_see_diodes_l3" name="TIMED SEE XPS Diode Irradiance - Level 3">
+    <access serviceName="tss" urlPath="timed_see_diodes_l3"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>2002-01-22</Start>
+                <End>2014-02-16</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="timed_see_diodes_l3a" name="TIMED SEE XPS Diode Irradiance - Level 3A">
+    <access serviceName="tss" urlPath="timed_see_diodes_l3a"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>2002-01-22</Start>
+                <End>2014-02-16</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="timed_see_lines_l3" name="TIMED SEE Solar Line Irradiance - Level 3">
+    <access serviceName="tss" urlPath="timed_see_lines_l3"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>2002-01-22</Start>
+                <End>2014-02-16</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="timed_see_lines_l3a" name="TIMED SEE Solar Line Irradiance - Level 3A">
+    <access serviceName="tss" urlPath="timed_see_lines_l3a"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>2002-01-22</Start>
+                <End>2014-02-16</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="timed_see_ssi_l4" name="TIMED SEE Solar Spectral Irradiance - Level 4">
+    <access serviceName="tss" urlPath="timed_see_ssi_l4"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>2002-01-22</Start>
+                <End>2014-02-20</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="timed_see_ssi_l4a" name="TIMED SEE Solar Spectral Irradiance - Level 4A">
+    <access serviceName="tss" urlPath="timed_see_ssi_l4a"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>2002-01-22</Start>
+                <End>2014-02-18</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="uars_solstice_ssi" name="UARS SOLSTICE Solar Spectral Irradiance">
+    <access serviceName="tss" urlPath="uars_solstice_ssi"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>1991-10-03</Start>
+                <End>2001-09-29</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="sme_ssi" name="SME Solar Spectral Irradiance">
+    <access serviceName="tss" urlPath="sme_ssi"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>1981-10-08</Start>
+                <End>1989-04-12</End>
+            </timeCoverage>
+        </dataset>
+ </dataset>
+ 
+ <dataset name="Solar Indices">
+  <dataset ID="composite_lyman_alpha" name="Composite Solar Lyman-alpha">
+    <access serviceName="tss" urlPath="composite_lyman_alpha"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>1947-02-14</Start>
+                <End>2014-02-16</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="composite_mg_index" name="Composite Magnesium II Core-to-Wing Index">
+    <access serviceName="tss" urlPath="composite_mg_index"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>1978-11-06</Start>
+                <End>2013-07-15</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="sorce_mg_index" name="SORCE Magnesium II Core-to-Wing Index">
+    <access serviceName="tss" urlPath="sorce_mg_index"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>2003-02-27</Start>
+                <End>2013-07-15</End>
+            </timeCoverage>
+        </dataset>
+  <!--dataset name="American Sunspot Numbers">
+    <access serviceName="tss" urlPath="american_sunspot_number" />
+  </dataset-->
+  <dataset ID="international_sunspot_number" name="International Sunspot Numbers">
+    <access serviceName="tss" urlPath="international_sunspot_number"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>1818-01-01</Start>
+                <End>2013-12-31</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="sfo_sunspot_indices" name="San Fernando Observatory/CSUN Sunspot Indices">
+    <access serviceName="tss" urlPath="sfo_sunspot_indices"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>1986-01-01</Start>
+                <End>2009-12-31</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="noaa_radio_flux" name="Solar Radio Flux at 10.7cm - Merged">
+    <access serviceName="tss" urlPath="noaa_radio_flux"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>1947-01-01</Start>
+                <End>2014-02-19</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="penticton_radio_flux_observed" name="Solar Radio Flux at 10.7cm - Observed">
+    <access serviceName="tss" urlPath="penticton_radio_flux_observed"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>&lt;!DOCTYPE </Start>
+                <End>&lt;!DOCTYPE </End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="penticton_radio_flux_adjusted" name="Solar Radio Flux at 10.7cm - Adjusted">
+    <access serviceName="tss" urlPath="penticton_radio_flux_adjusted"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>&lt;!DOCTYPE </Start>
+                <End>&lt;!DOCTYPE </End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="cak" name="Ca II K-Line">
+    <access serviceName="tss" urlPath="cak"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>1976-11-20</Start>
+                <End>2013-09-24</End>
+            </timeCoverage>
+        </dataset>
+ </dataset>
+
+ <dataset name="Experimental Data from NOAA NGDC SPIDR Web Service">
+  <dataset ID="spidr_f107_absolute" name="Absolute daily solar radio flux">
+    <access serviceName="tss" urlPath="spidr_f107_absolute"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>1947-02-14</Start>
+                <End>2012-07-31</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="spidr_f107_adjusted" name="Adjusted daily solar radio flux">
+    <access serviceName="tss" urlPath="spidr_f107_adjusted"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>1947-02-14</Start>
+                <End>2012-07-31</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="spidr_f107_observed" name="Observed daily solar radio flux">
+    <access serviceName="tss" urlPath="spidr_f107_observed"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>1947-02-14</Start>
+                <End>2012-07-30</End>
+            </timeCoverage>
+        </dataset>
+  <dataset ID="spidr_int_ssn" name="International Sunspot Number">
+    <access serviceName="tss" urlPath="spidr_int_ssn"/>
+  <timeCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <Start>1932-01-01</Start>
+                <End>2013-05-31</End>
+            </timeCoverage>
+        </dataset>
+ </dataset>
+
+</catalog>

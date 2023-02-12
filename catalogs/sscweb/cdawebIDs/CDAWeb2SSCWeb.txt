@@ -1,0 +1,6 @@
+wget -m -l 1 http://cdaweb.gsfc.nasa.gov/pub/software/cdawlib/0SKELTABLES/
+mv cdaweb.gsfc.nasa.gov/pub/software/cdawlib/0SKELTABLES/ .
+cd 0SKELTABLES/
+ls -1 | xargs -i grep Source_name {} | sed "s/^.*{/$1/" | uniq > allunique.txt
+ls -1 | xargs -i grep -H Source_name {} | sed "s/^.*{/$1/" > all.txt
+ 

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="LISIRD"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <service name="tss" serviceType="OpenDAP" base="" /> 
+
+ <dataset name="Total Solar Irradiance (TSI)">
+  <dataset name="SORCE Total Solar Irradiance - Daily Average" >
+    <access serviceName="tss" urlPath="sorce_tsi_24hr" />
+  </dataset>
+  <dataset name="SORCE Total Solar Irradiance - Six Hour Average" >
+    <access serviceName="tss" urlPath="sorce_tsi_6hr" />
+  </dataset>
+  <dataset name="Historical Total Solar Irradiance Reconstruction" >
+    <access serviceName="tss" urlPath="historical_tsi" />
+  </dataset>
+ </dataset>
+ 
+ <dataset name="Solar Spectral Irradiance (SSI)">
+  <dataset name="SORCE Solar Spectral Irradiance">
+    <access serviceName="tss" urlPath="sorce_ssi" />
+  </dataset>
+  <dataset name="TIMED SEE EGS Solar Spectral Irradiance - Level 2" >
+    <access serviceName="tss" urlPath="timed_see_egs_l2" />
+  </dataset>
+  <dataset name="TIMED SEE XPS Diode Irradiance - Level 2" >
+    <access serviceName="tss" urlPath="timed_see_xps_l2" />
+  </dataset>
+  <dataset name="TIMED SEE Solar Spectral Irradiance - Level 3" >
+    <access serviceName="tss" urlPath="timed_see_ssi" />
+  </dataset>
+  <dataset name="TIMED SEE Solar Spectral Irradiance - Level 3A" >
+    <access serviceName="tss" urlPath="timed_see_ssi_l3a" />
+  </dataset>
+  <dataset name="TIMED SEE XPS Diode Irradiance - Level 3" >
+    <access serviceName="tss" urlPath="timed_see_diodes_l3" />
+  </dataset>
+  <dataset name="TIMED SEE XPS Diode Irradiance - Level 3A" >
+    <access serviceName="tss" urlPath="timed_see_diodes_l3a" />
+  </dataset>
+  <dataset name="TIMED SEE Solar Line Irradiance - Level 3" >
+    <access serviceName="tss" urlPath="timed_see_lines_l3" />
+  </dataset>
+  <dataset name="TIMED SEE Solar Line Irradiance - Level 3A" >
+    <access serviceName="tss" urlPath="timed_see_lines_l3a" />
+  </dataset>
+  <dataset name="TIMED SEE Solar Spectral Irradiance - Level 4" >
+    <access serviceName="tss" urlPath="timed_see_ssi_l4" />
+  </dataset>
+  <dataset name="TIMED SEE Solar Spectral Irradiance - Level 4A" >
+    <access serviceName="tss" urlPath="timed_see_ssi_l4a" />
+  </dataset>
+  <dataset name="UARS SOLSTICE Solar Spectral Irradiance" >
+    <access serviceName="tss" urlPath="uars_solstice_ssi" />
+  </dataset>
+  <dataset name="SME Solar Spectral Irradiance">
+    <access serviceName="tss" urlPath="sme_ssi" />
+  </dataset>
+ </dataset>
+ 
+ <dataset name="Solar Indices">
+  <dataset name="Composite Solar Lyman-alpha">
+    <access serviceName="tss" urlPath="composite_lyman_alpha" />
+  </dataset>
+  <dataset name="Composite Magnesium II Core-to-Wing Index">
+    <access serviceName="tss" urlPath="composite_mg_index" />
+  </dataset>
+  <dataset name="SORCE Magnesium II Core-to-Wing Index" >
+    <access serviceName="tss" urlPath="sorce_mg_index" />
+  </dataset>
+  <!--dataset name="American Sunspot Numbers">
+    <access serviceName="tss" urlPath="american_sunspot_number" />
+  </dataset-->
+  <dataset name="International Sunspot Numbers">
+    <access serviceName="tss" urlPath="international_sunspot_number" />
+  </dataset>
+  <dataset name="San Fernando Observatory/CSUN Sunspot Indices">
+    <access serviceName="tss" urlPath="sfo_sunspot_indices" />
+  </dataset>
+  <dataset name="Solar Radio Flux at 10.7cm - Merged" >
+    <access serviceName="tss" urlPath="noaa_radio_flux" />
+  </dataset>
+  <dataset name="Solar Radio Flux at 10.7cm - Observed" >
+    <access serviceName="tss" urlPath="penticton_radio_flux_observed" />
+  </dataset>
+  <dataset name="Solar Radio Flux at 10.7cm - Adjusted" >
+    <access serviceName="tss" urlPath="penticton_radio_flux_adjusted" />
+  </dataset>
+  <dataset name="Ca II K-Line" >
+    <access serviceName="tss" urlPath="cak" />
+  </dataset>
+ </dataset>
+
+ <dataset name="Experimental Data from NOAA NGDC SPIDR Web Service" >
+  <dataset name="Absolute daily solar radio flux" >
+    <access serviceName="tss" urlPath="spidr_f107_absolute" />
+  </dataset>
+  <dataset name="Adjusted daily solar radio flux" >
+    <access serviceName="tss" urlPath="spidr_f107_adjusted" />
+  </dataset>
+  <dataset name="Observed daily solar radio flux" >
+    <access serviceName="tss" urlPath="spidr_f107_observed" />
+  </dataset>
+  <dataset name="International Sunspot Number" >
+    <access serviceName="tss" urlPath="spidr_int_ssn" />
+  </dataset>
+ </dataset>
+
+</catalog>
+
+

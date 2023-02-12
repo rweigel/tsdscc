@@ -1,0 +1,456 @@
+ "Lanl-01A>Los Alamos " -
+ "ALOUETTE-2>International " -
+ "Lanl-02A>Los Alamos " -
+ "AC>Advanced Composition " -
+ "ACE" } .
+ "Alouette-1>International " -
+ "Alouette-2>International " -
+ "ALSEP11>Apollo 11 Lunar " -
+ "ALSEP12>Apollo 12 Lunar " -
+ "ALSEP>Apollo Lunar Surface" -
+ "ALSEP15>Apollo 15 Lunar " -
+ "ALSEP>Apollo Lunar Surface" -
+ "bar_1A" } .
+ "bar_1B" } .
+ "bar_1C" } .
+ "bar_1D" } .
+ "bar_1G" } .
+ "bar_1H" } .
+ "bar_1I" } .
+ "bar_1J" } .
+ "bar_1K" } .
+ "bar_1L" } .
+ "bar_1M" } .
+ "bar_1O" } .
+ "bar_1Q" } .
+ "bar_1R" } .
+ "bar_1S" } .
+ "bar_1T" } .
+ "bar_1U" } .
+ "bar_1V" } .
+ "C1>Cluster spacecraft 1" } .
+ "CL>Cluster" } .
+ "C1>Cluster spacecraft 1" } .
+ "C2>Cluster spacecraft 2" } .
+ "C1>Cluster spacecraft 1" } .
+ "C2>Cluster spacecraft 2" } .
+ "C3>Cluster spacecraft 3" } .
+ "C1>Cluster spacecraft 1" } .
+ "C3>Cluster spacecraft 3" } .
+ "C4>Cluster spacecraft 4" } .
+ "C1>Cluster spacecraft 1" } .
+ "C4>Cluster spacecraft 4" } .
+ "CCE>AMPTE/Charge " -
+ "CSSWE>Colorado Student " -
+ "CL>Cluster" } .
+ "CANOPUS>Canadian Auroral " -
+ "CNOFS>Communications " -
+ "CNOFS>Communications/Navig" -
+ "CNOFS>Communications " -
+ "CRRES Satellite> Magnetic " -
+ "CSSWE>Colorado Student " -
+ "CT>Cluster spacecraft " -
+ "D1>Dynamic Explorer 1" } .
+ "D1>Dynamics Explorer 1" } .
+ "D1>Dynamic Explorer 1" } .
+ "D1_Dynamics Explorer 1" } .
+ "D1>Dynamic Explorer 1" } .
+ "DE>Dynamics Explorer" } .
+ "DE1>Dynamics Explorer 1" } .
+ "DE>Dynamics Explorer" } .
+ "DE-1>Dynamics Explorer 1" } .
+ "DE>Dynamics Explorer" } .
+ "DMSP>Defense " -
+ "dmsp-f16" } .
+ "DMSP>Defense " -
+ "dmsp-f17" } .
+ "DMSP>Defense " -
+ "dmsp-f18" } .
+ "dmsp>Defense " -
+ "DARN>Dual Auroral Radar " -
+ "EQ>Equator-S" } .
+ "FAST>FAST AURORAL SNAPSHOT" } .
+ "FAST>FAST Auroral Snapshot" -
+ "FAST>Fast Auroral SnapshoT" } .
+ "FMI>Finnish Meteorological" -
+ "G0>GOES10" } .
+ "G10>Geostationary " -
+ "G11>Geostationary " -
+ "G12>Geostationary " -
+ "G5>GOES-5" } .
+ "G6>GOES-6" } .
+ "GOES_7>Geostationary " -
+ "GB>Ground-Based " -
+ "GEOTAIL>Geomagnetic tail" } .
+ "GEOTAIL>GEOMAGNETIC TAIL" } .
+ "GEOTAIL>Geomagnetic tail" } .
+ "GEOTAIL>Geomagnetic Tail" } .
+ "GEOTAIL>Geomagnetic tail" } .
+ "GEOTAIL>Geomagnetic Tail" } .
+ "GEOTAIL>Geomagnetic tail" } .
+ "GEOTAIL>Geomagnetic Tail" } .
+ "GEOTAIL>Geomagnetic tail" } .
+ "GEOTAIL>Geomagnetic Tail" } .
+ "GEOTAIL>Geomagnetic tail" } .
+ "GEOTAIL>Geomagnetic Tail" } .
+ "GEOTAIL>Geomagnetic tail" } .
+ "Genesis> Genesis" } .
+ "GEOTAIL>GEOMAGNETIC TAIL" } .
+ "GEOTAIL>Geomagnetic Tail" } .
+ "GEOTAIL>GEOMAGNETIC TAIL" } .
+ "GEOTAIL>Geomagnetic Tail" } .
+ "....................>....." -
+ "GEOTAIL>GEOMAGNETIC TAIL" } .
+ "Geotail" } .
+ "GM>GMS-3" } .
+ "GM>GMS3" } .
+ "GOES13" } .
+ "GOES14" } .
+ "GOES15" } .
+ "GPS>Global Position System" } .
+ "GPS>Global Positioning " -
+ "HELIOS>Helios" } .
+ "Helios-1" } .
+ "Helios1" } .
+ "Helios-2" } .
+ "Helios2" } .
+ "HK>HAWKEYE" } .
+ "HK>Hawkeye" } .
+ "ISIS-1>International " -
+ "I1>ISEE-1" } .
+ "I1>ISEE 1" } .
+ "I1>ISEE1" } .
+ "ISIS-1>International " -
+ "ISIS-2>International " -
+ "I2>ISEE2" } .
+ "ISIS-2>International " -
+ "IMP7>Interplanetary " -
+ "IMP-8>Interplanetary " -
+ "I8>IMP-8: Interplanetary " -
+ "IMP-8>Interplanetary " -
+ "I8>IMP-8" } .
+ "IMP-8>Interplanetary " -
+ "I8>IMP-8" } .
+ "IMP-8>Interplanetary " -
+ "I8>IMP-8" } .
+ "IMP8>Interplanetary " -
+ "INTERBALL-AURORAL>Interbal" -
+ "INTERBALL-TAIL>Interball  " -
+ "INTERBALL-AURORAL>Interbal" -
+ "INTERBALL-GROUND>Ground " -
+ "IJ>Interplanetary " -
+ "IMAGE>Imager for " -
+ "IMAGE>IMAGE" } .
+ "IMAGE>Magnetopause to Aurora" } .
+ "IMAGE>Imager for " -
+ "IMAGE>Magnetopause to Aurora" } .
+ "IMAGE>Imager for " -
+ "IMAGE>IMAGE" } .
+ "IMAGE>Imager for " -
+ "IM>IMAGE" } .
+ "IMAGE>Imager for " -
+ "IR>AMPTE/IRM" } .
+ "ISEE1>International Sun " -
+ "ISEE1>International " -
+ "ISEE1>International Sun " -
+ "ISEE1>International " -
+ "ISEE1" } .
+ "ISEE1>International Sun " -
+ "ISEE2>International Sun " -
+ "ISEE2>International " -
+ "ISS>ISS" } .
+ "INTERBALL-TAIL>Interball " -
+ "IT>Interball Tail" } .
+ "INTERBALL-TAIL>Interball " -
+ "LANL1990_095>Los Alamos " -
+ "Lanl1990_095>Los Alamos " -
+ "LANL1990_095>Los Alamos " -
+ "LANL1991_080>Los Alamos " -
+ "L1>LANL91" } .
+ "Lanl1991_080>Los Alamos " -
+ "LANL1991_080>Los Alamos " -
+ "LANL1994_084>Los Alamos " -
+ "Lanl1994_084>Los Alamos " -
+ "LANL1994_084>Los Alamos " -
+ "Lanl-97A>Los Alamos " -
+ "LANL-97A>Los Alamos " -
+ "LANL1989_046>Los Alamos " -
+ "Lanl1989_046>Los Alamos " -
+ "LANL1989_046>Los Alamos " -
+ "MAP>Microwave Anisotropy " -
+ "Mariner2" } .
+ "MESSENGER>Messenger" } .
+ "MetOp1" } .
+ "MetOp2" } .
+ "TIROS-N>Polar Operational " -
+ "NOAA05>Polar Operational " -
+ "NOAA-06>Polar Operational " -
+ "NOAA05>Polar Operational " -
+ "NOAA07>Polar Operational " -
+ "NOAA-08>Polar Operational " -
+ "NOAA08>Polar Operational " -
+ "NOAA-10>Polar Operational " -
+ "NOAA10>Polar Operational " -
+ "NOAA-12>Polar Operational " -
+ "NOAA12>Polar Operational " -
+ "NOAA14>Polar Operational " -
+ "NOAA15" } .
+ "NOAA16" } .
+ "NOAA18" } .
+ "noaa19" } .
+ "NOAA19" } .
+ "noaa19" } .
+ "OHZORA> Proton and " -
+ "OMNI (1AU IP Data)>Merged " -
+ "Pioneer10" } .
+ "Pioneer11" } .
+ "Pioneer6" } .
+ "Pioneer7" } .
+ "PioneerVenus" } .
+ "POLAR>POLAR PLASMA " -
+ "POLAR>POLAR Laboratory" } .
+ "POLAR>Polar Plasma " -
+ "POLAR> Polar Plasma " -
+ "POLAR>Polar Plasma " -
+ "po>Polar Plasma Laboratory" } .
+ "POLAR>Polar Plasma " -
+ "PO>Polar Plasma Laboratory" } .
+ "POLAR>Polar Plasma " -
+ "POLAR>POLAR Laboratory" } .
+ "POLAR>Polar Plasma " -
+ "PO>Polar Plasma Laboratory" } .
+ "POLAR> Polar Plasma " -
+ "POLAR>Polar Plasma " -
+ "Polar>Polar Plasma " -
+ "POLAR>Polar Plasma " -
+ "POLAR>POLAR PLASMA " -
+ "POLAR>Polar Plasma " -
+ "POLAR>POLAR Laboratory" } .
+ "POLAR>Polar Plasma " -
+ "Polar" } .
+ "PROGNOZ>Prognoz" } .
+ "Pioneer Venus" } .
+ "RBSP-A>Radiation Belt " -
+ "RBSPA>Radiation Belt Storm" -
+ "rbspa>Radiation Belt Storm" -
+ "RBSPA>Van Allen Probes " -
+ "RBSPA>Radiation Belt Storm" -
+ "RBSP-A>Radiation Belt " -
+ "RBSPA>Radiation Belt Storm" -
+ "rbsp-a>Radiation Belt " -
+ "RBSPA>Radiation Belt Storm" -
+ "RBSP-A>Radiation Belt " -
+ "RBSP-A-HIGH>Radiation Belt" -
+ "RBSPA>Radiation Belt Storm" -
+ "RBSP-A-LOW>Radiation Belt " -
+ "RBSP-A-m35>Radiation Belt " -
+ "RBSP-A-m75>Radiation Belt " -
+ "RBSPA>Radiation Belt Storm" -
+ "rbspa>Radiation Belt Storm" -
+ "RBSP-A-RBSPICE>Radiation " -
+ "RBSP-A>Radiation Belt " -
+ "RBSP-A-RBSPICE>Radiation " -
+ "RBSP-A>Radiation Belt " -
+ "RBSP-A-RBSPICE>Radiation " -
+ "RBSP-A>Radiation Belt " -
+ "RBSPA>Radiation Belt Storm" -
+ "rbspa>Radiation Belt Storm" -
+ "RBSP-A>Radiation Belt " -
+ "RBSPA>Radiation Belt Storm" -
+ "rbspa>Van Allen Probes, " -
+ "RBSPA>Radiation Belt Storm" -
+ "rbspa>Van Allen Probes, " -
+ "RBSPA>Radiation Belt Storm" -
+ "rbsp-a>Radiation Belt " -
+ "RBSP-A>Radiation Belt " -
+ "RBSPA>Radiation Belt Storm" -
+ "rbsp-a>Radiation Belt " -
+ "RBSPA>Radiation Belt Storm" -
+ "RBSP-B>Radiation Belt " -
+ "RBSPB>Radiation Belt Storm" -
+ "rbspa>Radiation Belt Storm" -
+ "RBSPB>Van Allen Probes " -
+ "RBSPB>Radiation Belt Storm" -
+ "RBSP-B>Radiation Belt " -
+ "RBSPB>Radiation Belt Storm" -
+ "RBSP-B>Radiation Belt " -
+ "rbsp-b>Radiation Belt " -
+ "RBSPA>Radiation Belt Storm" -
+ "RBSP-B>Radiation Belt " -
+ "RBSP-B-HIGH>Radiation Belt" -
+ "RBSPB>Radiation Belt Storm" -
+ "RBSP-B-LOW>Radiation Belt " -
+ "RBSP-B-m35>Radiation Belt " -
+ "RBSP-B-m75>Radiation Belt " -
+ "RBSPB>Radiation Belt Storm" -
+ "rbspa>Radiation Belt Storm" -
+ "RBSP-B-RBSPICE>Radiation " -
+ "RBSP-B>Radiation Belt " -
+ "RBSPB>Radiation Belt Storm" -
+ "rbspa>Radiation Belt Storm" -
+ "RBSPB>Radiation Belt Storm" -
+ "RBSP-B>Radiation Belt " -
+ "RBSPB>Radiation Belt Storm" -
+ "rbspb>Van Allen Probes, " -
+ "RBSPB>Radiation Belt Storm" -
+ "rbspb>Van Allen Probes, " -
+ "RBSP-B>Radiation Belt " -
+ "RBSPB>Radiation Belt Storm" -
+ "rbsp-b>Radiation Belt " -
+ "RBSP-B>Radiation Belt " -
+ "RBSPB>Radiation Belt Storm" -
+ "ROCSAT-1(FORMOSAT-1)>Ionos" -
+ "S1>82-S019" } .
+ "S1>82-019" } .
+ "S1>LANL 322 East" } .
+ "S2>LANL 070 East" } .
+ "S3>84-037" } .
+ "S3>84-S037" } .
+ "S3>LANL 205 East" } .
+ "S9>84-129" } .
+ "s9>84-S129" } .
+ "SC>SCATHA" } .
+ "STELAB>Solar-Terrestrial " -
+ "SONDRESTROM>Greenland " -
+ "SNOE>Student Nitric Oxide " -
+ "SOHO>Solar Heliospheric " -
+ "SOHO>Solar Heliospher " -
+ "SOHO>SOLAR HELIOSPHERIC " -
+ "SSCWeb" } .
+ "sta>Solar Terrestrial " -
+ "STA>Solar Terrestrial " -
+ "STEREOA>Solar Terrestrial " -
+ "sta>Solar Terrestrial " -
+ "Ahead>Solar Terrestrial " -
+ "sta>Solar Terrestrial " -
+ "sta>STEREO-A  Solar " -
+ "STEREO>Solar Terrestrial " -
+ "STEREOA>SolarTerrestrial " -
+ "stb>Solar Terrestrial " -
+ "STB>Solar Terrestrial " -
+ "STEREOB>Solar Terrestrial " -
+ "stb>Solar Terrestrial " -
+ "Behind>Solar Terrestrial " -
+ "stb>Solar Terrestrial " -
+ "STEREO>Solar Terrestrial " -
+ "STEREOB>SolarTerrestrial " -
+ "STEREO>Solar TErrestrial " -
+ "SAMPEX>Solar Anomalous " -
+ "T1>LANL 322 East" } .
+ "T2>LANL 070 East" } .
+ "T3>LANL 205 East" } .
+ "tha>THEMIS Probe A" } .
+ "THA>THEMIS-A>THEMIS Probe A" } .
+ "THA>THEMIS Probe A" } .
+ "tha>THEMIS Probe A" } .
+ "THA> THEMIS A" } .
+ "tha>THEMIS Probe A" } .
+ "THA>THEMIS Probe A" } .
+ "tha>THEMIS Probe A" } .
+ "THA>Themis Probe A" } .
+ "THA>THEMIS-A" } .
+ "THB>THEMIS Probe B" } .
+ "THB>Themis Probe B" } .
+ "THB>THEMIS-B" } .
+ "THC>THEMIS Probe C" } .
+ "THC>Themis Probe C" } .
+ "THC>Themis Probe B" } .
+ "THC>Themis Probe C" } .
+ "THC>THEMIS-C" } .
+ "THD>THEMIS Probe D" } .
+ "THD>Themis Probe D" } .
+ "THD>THEMIS-D" } .
+ "THA>THEMIS Probe A" } .
+ "THE>Themis Probe E" } .
+ "THEMIS>Themis Project" } .
+ "THA>Themis Project" } .
+ "THEMIS>Time History of " -
+ "THG>Themis Project" } .
+ "THEMIS>Themis Project" } .
+ "THE>THEMIS-E" } .
+ "THG_L1>THEMIS Ground Based" -
+ "THG_L2>THEMIS Ground Based" -
+ "THG_L2>PENGUIn 40 degree " -
+ "THG_L2>THEMIS Ground Based" -
+ "THG>Themis Project" } .
+ "TIMED" } .
+ "TIMED>Thermosphere+Ionosph" -
+ "TIMED" } .
+ "TIMED>Thermosphere+Ionosph" -
+ "TIMED" } .
+ "TWINS1>Two Wide-angle " -
+ "TWINS2>Two Wide-angle " -
+ "ULYSSES>Ulysses" } .
+ "ULYSSES> Ulysses" } .
+ "ULYSSES>Ulysses" } .
+ "Ulysses>Ulysses" } .
+ "ULYSSES>Ulysses" } .
+ "Ulysses" } .
+ "ULYSSES>Ulysses" } .
+ "VI>Viking" } .
+ "VI>Viking (Swedish " -
+ "Voyager1" } .
+ "VOYAGER1> Voyager 1" } .
+ "VOYAGER1>" } .
+ "Voyager1" } .
+ "VOYAGER1> Voyager 1" } .
+ "Voyager1" } .
+ "VOYAGER1> Voyager 1" } .
+ "Voyager1" } .
+ "Voyager2" } .
+ "VOYAGER2> Voyager 2" } .
+ "VOYAGER2> Voyager 1" } .
+ "VOYAGER2>" } .
+ "voyager2" } .
+ "VOYAGER2> Voyager 2" } .
+ "Voyager2" } .
+ "VOYAGER2> Voyager 2" } .
+ "VOYAGER2> Voyager 1" } .
+ "WIND>WIND INTERPLANETARY " -
+ "WIND>Wind Interplanetary " -
+ "WIND>WIND Interplanetary " -
+ "WIND>Wind Interplantary " -
+ "WIND>Wind Interplanetary " -
+ "WIND>WIND Interplanetary " -
+ "WIND>Wind Interplanetary " -
+ "WIND" } .
+ "WIND>Wind Interplanetary " -
+ "WIND>WIND Interplanetary " -
+ "WIND>Wind Interplanetary " -
+ "WIND>WIND INTERPLANETARY " -
+ "WIND>Wind Interplanetary " -
+ "WIND>WIND INTERPLANETARY " -
+ "WIND>Wind Interplanetary " -
+ "wi>Wind Interplanetary " -
+ "....................>....." -
+ "Wind" } .
+ "WIND>WIND INTERPLANETARY " -
+ "XF>Finland Ground-Based" } .
+ "XI>Iceland Ground-Based" } .
+ "XK>Kiruna EISCAT" } .
+ "XS>Sabre" } .
+ "XS>Sodankyla EISCAT" } .
+ "XS>St. Santin" } .
+ "XS>Syowa" } .
+ "XT>Tromso EISCAT" } .
+ "XV>Vertical Ionosonde" } .
+ "ZA>NGDC AE" } .
+ "ZC>Comandante Ferraz" } .
+ "ZE>EISCAT" } .
+ "ZF>Finnish Met" } .
+ "ZH>Halley" } .
+ "ZH>Huancayo" } .
+ "ZI>Iqaluit Canada" } .
+ "ZI>Ivalo" } .
+ "ZK>Kilipisjarvi" } .
+ "ZM>McMurdo" } .
+ "ZN>NGDC Ground Mag" } .
+ "ZO>Onagawa" } .
+ "ZR>RGON chain" } .
+ "ZR>Rovaniemi" } .
+ "ZS>STARE" } .
+ "ZS>Siple" } .
+ "ZS>South Pole" } .
+ "ZS>Sibizmir USSR" } .
+ "ZS>Indices" } .
+ "ZW>Weston" } .

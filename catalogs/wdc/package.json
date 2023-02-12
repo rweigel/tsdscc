@@ -1,0 +1,10 @@
+{
+	"name": "wdc",
+  	"version": "0.1.0",
+	"dependencies": {
+		"xml2js"   : "*",
+		"request"  : "*",
+		"adm-zip"  : "*",
+		"express"  : "3.1.0"
+	}
+}

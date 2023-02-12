@@ -1,0 +1,36 @@
+NAL	Ny Ålesund     78.92	11.95
+LYR	Longyearbyen   78.20	15.82
+HOR	Hornsund       77.00	15.60
+HOP	Hopen Island   76.51	25.01
+BJN	Bear Island    74.50	19.20
+NOR	Nordkapp       71.09	25.79
+SOR	Sørøya	       70.54	22.22
+ALT	Alta	       69.86	22.96
+KEV	Kevo	       69.76	27.01
+TRO	Tromsø	       69.66	18.94
+MAS	Masi	       69.46	23.70
+AND	Andenes	       69.30	16.03
+KIL	Kilpisjärvi    69.06	20.77
+KAU	Kautokeino     69.02	23.05
+IVA	Ivalo	       68.56	27.29
+ABK	Abisko	       68.35	18.82
+LEK	Leknes	       68.13	13.54
+MUO	Muonio	       68.02	23.53
+LOZ	Lovozero       67.97	35.08
+KIR	Kiruna	       67.84	20.42
+SOD	Sodankylä      67.37	26.63
+PEL	Pello	       66.90	24.08
+JCK	Jäckvik	       66.40	16.98
+DON	Dønna	       66.11	12.50
+RAN	Rørvik		   65.54	26.25
+RVK	Rørvik	       64.94	10.98
+LYC	Lycksele       64.61	18.75
+OUJ	Oulujärvi      64.52	27.23
+MEK	Mekrijärvi     62.77	30.97
+HAN	Hankasalmi     62.25	26.60
+DOB	Dombås	       62.07	9.11 
+SOL	Solund	       61.08	4.84 
+NUR	Nurmijärvi     60.50	24.65
+UPS	Uppsala	       59.90	17.35
+KAR	Karmøy	       59.21	5.24 
+TAR	Tartu	       58.26	26.46

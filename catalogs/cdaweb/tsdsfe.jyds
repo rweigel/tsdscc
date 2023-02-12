@@ -1,0 +1,177 @@
+###################################################
+# title: tsds client
+# label: tsds client
+import math
+import java.io.IOException
+import org.virbo.datasource.HtmlResponseIOException
+import java.lang.IllegalArgumentException
+import re
+
+tr         = getParam( 'timerange', '1997-08-26/1997-09-05', 'timerange to load' )
+catalog    = getParam( 'catalog', 'SSCWeb', 'catalog' )
+dataset    = getParam( 'dataset', 'ace', 'dataset' )
+parameters = getParam( 'parameters', 'X_GEO,Y_GEO,Z_GEO', 'parameters' )
+server     = getParam( 'server', 'http://tsds.org/get/' )
+units      = getParam( 'units', 'R_E,R_E,R_E' )
+usecache   = getParam( 'usecache', 'true' )
+labels     = getParam( 'labels', '' )
+title      = getParam( 'title', 'def' )
+fills      = getParam( 'fills', '-1e31')
+process    = getParam( 'type', 'timeseriesscoff', 'plot type', ['timeseries','timeseriessc','autocorrelation','histogram','periodogram','spectrogram'] )
+style      = getParam( 'type', '0', 'plot style', ['0','1','2'] )
+test       = getParam( 'test', 0, 'test number, 0 is no test', [0,1] )
+
+if ( title=='def' ):
+  title= 'Catalog: ' + catalog + ' | Dataset: ' + dataset
+print 'v20140718_1057'
+#print parameters
+
+drtr  = DatumRangeUtil.parseTimeRange(tr)
+tf    = TimeParser.create('$Y-$m-$d')
+start = tf.format( drtr.min(), None )
+stop  = tf.format( drtr.max(), None )
+
+surl = server + "?" + "catalog=" + catalog + "&dataset=" + dataset + "&parameters=" + parameters + "&start=" + start + "&stop=" + stop
+print surl
+
+if ( test==1 ):
+    surl= 'https://raw.githubusercontent.com/tsds/tsds2/gh-pages/tsdsfe/scripts/tsdsfe.txt'
+
+# note the server may provide a valid but html response.
+
+try:
+  f = downloadResourceAsTempFile( URL( surl ), monitor )
+except java.io.IOException, ex:
+  import org.das2.dataset
+  raise org.das2.dataset.NoDataInIntervalException('Could not download and save ' + surl)
+
+#print 'File: '+f.toString()
+
+#from java.io import File
+#f = File('/tmp/autoplot_data/fscache/temp/tsds.org/get/000000000@099de20fd')
+#print 'xFile: '+f.toString()
+
+from java.io import FileReader, BufferedReader
+fo= BufferedReader( FileReader(f) )
+line1= fo.readLine()
+
+if line1 is None:
+   raise Exception(' tsdsfe.jyds - No data from '+surl)
+
+print 'First line: ' + line1
+print 'Labels:' + labels
+print 'Fills:' + fills
+
+fo.close()
+
+try:
+   from org.virbo.dataset import SemanticOps
+   from org.das2.datum import EnumerationUnits
+   from org.virbo.dataset import DDataSet
+   if ( 1 ):
+      if ( len(labels)==0 ):
+          ll= parameters.split(',')  
+      else:
+          ll= labels.split(',')
+      eu= EnumerationUnits.create('default')
+      lenll= len(ll)
+      units= units.split(',')
+      fills= fills.split(',')
+
+      if (ll > 1):
+           isscalar= False
+
+      #print len(set(units))
+      # Not working.   If units are not all the same, we need special treatment.
+      #if (len(units) > len(set(units)): Requires newer version of Python
+      for i in units:
+          if i != units[0]:
+            raise Exception(' tsdsfe.jyds - Units must be same for all columns to plot.')
+            break
+
+      llds= DDataSet.createRank1(lenll)
+      lls = []
+      for i in xrange(lenll):
+         ll[i] = re.sub("%7C","|",ll[i])
+         if ( process == 'timeseriessc' or process == 'timeseriesscoff'):
+             lls.append('(' + ll[i] + ' - &mu;)/&sigma;')
+         if (units[0] == '' or process == 'timeseriessc'):
+           llds[i]= eu.createDatum( lls[i]).doubleValue(eu)
+         else:
+           llds[i]= eu.createDatum( ll[i] + ' [' + units[0] + ']').doubleValue(eu)
+
+      llds.putProperty( QDataSet.UNITS, eu )
+      result= getDataSet( 'vap+dat:file://'+f.toString()+'?bundle=1:&depend0=field0' )
+      result.putProperty( QDataSet.DEPEND_1, llds )
+   else:
+      result= getDataSet( 'vap+dat:file://'+f.toString() )
+   
+   if (isscalar):
+     result.putProperty( QDataSet.TITLE, title )
+     result.putProperty( QDataSet.UNITS, SemanticOps.lookupUnits(units) )
+     result.putProperty( QDataSet.LABEL, labels )
+   else:
+     result.putProperty( QDataSet.TITLE, title + ' | Parameters: ' + parameters)
+
+   try:
+     fv= float(fills[0])
+     result.putProperty( QDataSet.FILL_VALUE, fv )   
+   except:
+     print "Could not convert " + fills[0] + " to a float"
+
+except org.virbo.datasource.HtmlResponseIOException,ex:
+   raise org.das2.dataset.NoDataInIntervalException('Problem with response')
+except java.lang.IllegalArgumentException, ex:
+   raise org.das2.dataset.NoDataInIntervalException('No data in interval')
+
+n = result.property( QDataSet.DEPEND_1 ).length()
+if ( process == 'timeseriessc' or process == 'timeseriesscoff' or process == 'histogramsc' ):
+   m= []
+   s=[]
+   print lls
+   for i in range(0,n):
+       m.append(mean(result[:,i]))
+       print m[i]
+       s.append(stddev(result[:,i]))
+       print s[i]
+       ms= '%.2g' % mean(result[:,i])
+       ss= '%.2g' % s[i]
+       result[:,i]= (result[:,i]-m[i])/s[i]
+       m[i]= max(abs(result[:,i]))
+       ll[i] = lls[i] + ';  &mu; = ' + ms + ', &sigma; = ' + ss + ' [' + units[i] + ']'
+       llds[i]= eu.createDatum( ll[i]).doubleValue(eu)
+
+if ( process == 'timeseriesscoff' and n > 1):
+    mo = math.ceil(float(max(m) % 3))
+    print mo
+    if (mo < 3.0):
+        mo= 3.0
+    for i in range(0,n):
+        off= float(n-i-1)*mo
+        print "offset = " + str(off)
+        result[:,i] = result[:,i] + off
+        ll[i] = str(int(off)) + ' + ' + ll[i]
+        llds[i]= eu.createDatum( ll[i]).doubleValue(eu)
+
+if ( process == 'timeseriessc' ):
+   result.putProperty( QDataSet.DEPEND_1, llds )
+elif ( process=='histogram' ):
+    result= autoHistogram(result)
+    result= putProperty( result, QDataSet.LABEL, "# in bin" )
+    xtags= result.property( QDataSet.DEPEND_0 )
+    xtags= putProperty( xtags, QDataSet.UNITS, units[0])
+    if (units[0] == ''):
+        xtags= putProperty( xtags, QDataSet.LABEL, ll[0])
+    else:
+        xtags= putProperty( xtags, QDataSet.LABEL, ll[0] + ' [' + units[0] + ']')
+elif ( process=='periodogram' ):
+    if ( result.rank()==2 ): result= result[:,0]
+    result= fftPower(result)
+    result= putProperty( result, QDataSet.LABEL, "Power (arb. scale)" )
+    xtags= result.property( QDataSet.DEPEND_0 )
+    xtags= putProperty( xtags, QDataSet.LABEL, 'f [Hz]')
+elif ( process=='spectrogram' ):
+    if ( result.rank()==2 ): result= result[:,0]
+    result= fftPower(result, 100, None)
+    xtags= result.property( QDataSet.DEPEND_0 )
+    result= putProperty( result, QDataSet.LABEL, "f [Hz]" ) 

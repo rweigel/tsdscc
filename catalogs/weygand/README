@@ -1,0 +1,5 @@
+Create all metadata
+ node metadata.js ; node metadata-post.js
+
+Only post-process metadata created by metadata.js (faster)
+ node metadata-post.js

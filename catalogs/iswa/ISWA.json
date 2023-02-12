@@ -1,0 +1,220 @@
+{
+    "catalog": {
+        "$": {
+            "id": "ISWA"
+        },
+        "dataset": [
+            {
+                "$": {
+                    "id": "ACE",
+                    "delim": "",
+                    "lineregex": "^[0-9][0-9][0-9][0-9]",
+                    "timeformat": "$Y-$m-$d,$H:$M:$S"
+                },
+                "timeCoverage": [
+                    {
+                        "Start": [],
+                        "End": [],
+                        "Cadence": []
+                    }
+                ],
+                "variables": [
+                    {
+                        "variable": [
+                            {
+                                "$": {
+                                    "id": "IntegralProtonFlux_10",
+                                    "name": "IntegralProtonFlux_10",
+                                    "label": "IntegralProtonFlux_10",
+                                    "units": "p/(cm<sup>2</sup>-sec-ster)",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=IntegralProtonFlux_10%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "IntegralProtonFlux_30",
+                                    "name": "IntegralProtonFlux_30",
+                                    "label": "IntegralProtonFlux_30",
+                                    "units": "p/(cm<sup>2</sup>-sec-ster)",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=IntegralProtonFlux_30%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "B_y",
+                                    "name": "B_y",
+                                    "label": "B_y",
+                                    "units": "nT",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=B_y%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "B_t",
+                                    "name": "B_t",
+                                    "label": "B_t",
+                                    "units": "nT",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=B_t%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "Latitude",
+                                    "name": "Latitude",
+                                    "label": "Latitude",
+                                    "units": "&deg;",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=Latitude%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "Longitude",
+                                    "name": "Longitude",
+                                    "label": "Longitude",
+                                    "units": "&deg;",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=Longitude%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "ProtonDensity",
+                                    "name": "ProtonDensity",
+                                    "label": "ProtonDensity",
+                                    "units": "cm<sup>-3</sup>",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=ProtonDensity%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "ElectronFlux_38_53",
+                                    "name": "ElectronFlux_38_53",
+                                    "label": "ElectronFlux_38_53",
+                                    "units": "p/(cm<sup>2</sup>-sec-ster-MeV)",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=ElectronFlux_38_53%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "BulkSpeed",
+                                    "name": "BulkSpeed",
+                                    "label": "BulkSpeed",
+                                    "units": "km/s",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=BulkSpeed%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "ElectronFlux_175_315",
+                                    "name": "ElectronFlux_175_315",
+                                    "label": "ElectronFlux_175_315",
+                                    "units": "p/(cm<sup>2</sup>-sec-ster-MeV)",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=ElectronFlux_175_315%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "ProtonFlux_47_68",
+                                    "name": "ProtonFlux_47_68",
+                                    "label": "ProtonFlux_47_68",
+                                    "units": "p/(cm<sup>2</sup>-sec-ster-MeV)",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=ProtonFlux_47_68%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "ProtonFlux_115_195",
+                                    "name": "ProtonFlux_115_195",
+                                    "label": "ProtonFlux_115_195",
+                                    "units": "p/(cm<sup>2</sup>-sec-ster-MeV)",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=ProtonFlux_115_195%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "B_x",
+                                    "name": "B_x",
+                                    "label": "B_x",
+                                    "units": "nT",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=B_x%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "ProtonFlux_310_580",
+                                    "name": "ProtonFlux_310_580",
+                                    "label": "ProtonFlux_310_580",
+                                    "units": "p/(cm<sup>2</sup>-sec-ster-MeV)",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=ProtonFlux_310_580%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "IonTemperature",
+                                    "name": "IonTemperature",
+                                    "label": "IonTemperature",
+                                    "units": "K",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=IonTemperature%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "B_z",
+                                    "name": "B_z",
+                                    "label": "B_z",
+                                    "units": "nT",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=B_z%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "ProtonFlux_1060_1900",
+                                    "name": "ProtonFlux_1060_1900",
+                                    "label": "ProtonFlux_1060_1900",
+                                    "units": "p/(cm<sup>2</sup>-sec-ster-MeV)",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=ProtonFlux_1060_1900%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "FP6p_761_1220",
+                                    "name": "FP6p_761_1220",
+                                    "label": "FP6p_761_1220",
+                                    "units": "p/(cm<sup>2</sup>-sec-ster-MeV)",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=FP6p_761_1220%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            },
+                            {
+                                "$": {
+                                    "id": "AnistropyIndex",
+                                    "name": "AnistropyIndex",
+                                    "label": "AnistropyIndex",
+                                    "units": " ",
+                                    "columns": "3",
+                                    "urltemplate": "https://iswa.gsfc.nasa.gov/IswaSystemWebApp/DatabaseDataStreamServlet?format=TEXT%26resource=ACE%26quantity=AnistropyIndex%26begin-time=$Y-$m-$d%252023:59:59%26end-time=${Y;offset=0}-${m;offset=0}-${d;offset=1}%252023:59:59"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

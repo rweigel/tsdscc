@@ -1,0 +1,10 @@
+{
+	"name": "cdaweb2",
+  	"version": "0.1.0",
+	"dependencies": {
+		"xml2js"   : "*",
+		"request"  : "*",
+		"express"  : "3.1.0",
+		"async"    : "*"
+	}
+}

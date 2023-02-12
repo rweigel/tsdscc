@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalog id="" name="">
+  <documentation xlink:href="" xlink:title=""/>
+  <documentation xlink:title="Catalog generation date: "/>
+  <dataset id="" name="" label="" timecolumns="" timeformat="" lineregex="" urltemplate="">
+    <timeCoverage>
+      <Start></Start>
+      <End></End>
+      <Cadence></Cadence>
+    </timeCoverage>
+    <groups>
+      <group id="" name="" label="" type=""/>
+    </groups>
+    <variables>
+      <variable id="" name="" label="" units="" type="" fillvalue="" rendering="" columns=""/>
+    </variables>
+  </dataset>
+</catalog>

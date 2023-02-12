@@ -1,0 +1,12 @@
+{
+	"name": "weygand",
+  	"version": "0.0.1",
+  	"engines":{"node": "0.12.x"},
+	"dependencies": {
+		"mkdirp": "*",
+		"tsdsdd": "https://github.com/rweigel/tsdsdd/tarball/master"
+	},
+	"scripts": {
+		"test": "node test.js"
+	}
+}

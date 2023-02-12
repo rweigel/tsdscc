@@ -1,0 +1,302 @@
+GOES5
+
+GOES 6
+
+X-Ray Sensor (XRS)
+xrs_1m, X-rays; two channels; five minute averages.	
+xrs_5m, X-rays; two channels; one minute averages.	
+
+Energetic Particle Sensor (EPS)
+eps_1m, Energetic particle sensor; electrons; protons; alpha-particles; five minute averages.	
+eps_5m, Energetic particle sensor; electrons; protons; alpha-particles; one minute averages.	
+
+High Energy Proton Alpha detector (HEPAD)
+hepad_5m, High Energetic Proton; Alpaha and Electrons Detector; five minute averages.	
+
+Magnetometer
+magneto_1m, Magnetic field vector; one minute averages.	
+magneto_5m, Magnetic field vector; five minute averages.	
+
+GOES7
+xrs_1m, X-rays; two channels; five minute averages.	
+xrs_5m, X-rays; two channels; one minute averages.	
+
+Energetic Particle Sensor (EPS)
+eps_1m, Energetic particle sensor; electrons; protons; alpha-particles; five minute aver	
+eps_5m, Energetic particle sensor; electrons; protons; alpha-particles; one minute avera	
+
+Magnetometer
+magneto_1m	Magnetic field vector; one minute averages.	
+magneto_5m	Magnetic field vector; five minute averages.	
+
+GOES8
+
+X-Ray Sensor (XRS)
+xrs_1m	X-rays; two channels; five minute averages.	
+xrs_5m	X-rays; two channels; one minute averages.	
+
+Energetic Particle Sensor (EPS)
+eps_1m	Energetic particle sensor; electrons; protons; alpha-particles; five minute aver	
+eps_5m	Energetic particle sensor; electrons; protons; alpha-particles; one minute avera	
+
+High Energy Proton Alpha detector (HEPAD)
+hepad_5m	High Energetic Proton; Alpaha and Electrons Detector; five minute averages.	
+
+Magnetometer
+magneto_1m	Magnetic field vector; one minute averages.	
+magneto_5m	Magnetic field vector; five minute averages.	
+
+GOES9
+
+X-Ray Sensor (XRS)
+xrs_1m	X-rays; two channels; five minute averages.	
+xrs_5m	X-rays; two channels; one minute averages.	
+
+Energetic Particle Sensor (EPS)
+eps_1m	Energetic particle sensor; electrons; protons; alpha-particles; five minute aver	
+eps_5m	Energetic particle sensor; electrons; protons; alpha-particles; one minute avera	
+
+High Energy Proton Alpha detector (HEPAD)
+hepad_5m	High Energetic Proton; Alpaha and Electrons Detector; five minute averages.	
+
+Magnetometer
+Data type	Description	View metadata as:
+magneto_1m	Magnetic field vector; one minute averages.	
+magneto_5m	Magnetic field vector; five minute averages.	
+
+GOES10
+
+X-Ray Sensor (XRS)
+xrs_1m	X-rays; two channels; five minute averages.	
+xrs_5m	X-rays; two channels; one minute averages.	
+
+Energetic Particle Sensor (EPS)
+eps_1m	Energetic particle sensor; electrons; protons; alpha-particles; five minute aver	
+eps_5m	Energetic particle sensor; electrons; protons; alpha-particles; one minute avera	
+
+High Energy Proton Alpha detector (HEPAD)
+hepad_5m	High Energetic Proton; Alpaha and Electrons Detector; five minute averages.	
+
+Magnetometer
+magneto_1m	Magnetic field vector; one minute averages.	
+magneto_5m	Magnetic field vector; five minute averages.	
+
+GOES11
+
+X-Ray Sensor (XRS)
+xrs_1m	X-rays; two channels; five minute averages.	
+xrs_5m	X-rays; two channels; one minute averages.	
+
+Energetic Particle Sensor (EPS)
+eps_1m	Energetic particle sensor; electrons; protons; alpha-particles; five minute aver	
+eps_5m	Energetic particle sensor; electrons; protons; alpha-particles; one minute avera	
+
+High Energy Proton Alpha detector (HEPAD)
+hepad_5m	High Energetic Proton; Alpaha and Electrons Detector; five minute averages.	
+
+Magnetometer
+magneto_1m	Magnetic field vector; one minute averages.	
+magneto_5m	Magnetic field vector; five minute averages.	
+
+GOES12
+
+X-Ray Sensor (XRS)
+xrs_1m	X-rays; two channels; five minute averages.	
+xrs_5m	X-rays; two channels; one minute averages.	
+
+Energetic Particle Sensor (EPS)
+eps_1m	Energetic particle sensor; electrons; protons; alpha-particles; five minute aver	
+eps_5m	Energetic particle sensor; electrons; protons; alpha-particles; one minute avera	
+
+High Energy Proton Alpha detector (HEPAD)
+hepad_5m	High Energetic Proton; Alpaha and Electrons Detector; five minute averages.	
+
+Magnetometer
+magneto_1m	Magnetic field vector; one minute averages.	
+magneto_5m	Magnetic field vector; five minute averages.	
+
+GOES13
+
+Electron Proton Alpha detector (EPEAD)
+epead_a16ew_1m	Alpha particles; six channels; two look directions; one minute averages.	
+epead_a16ew_5m	Alpha particles; six channels; two look directions; five minute averages.	
+epead_cpflux_5m	Protons; corrected integral flux; five minute averages.	
+epead_e13ew_1m	Electrons; three channels; two look directions; one minute averages.	
+epead_e13ew_5m	Electrons; three channels; two look directions; five minute averages.	
+epead_p17ew_1m	Protons; three channels; two look directions; five minute averages.	
+epead_p17ew_5m	Protons; three channels; two look directions; five minute averages.	
+epead_a16e_32s	Alpha particles; six channels; one look direction; 32 second values.	
+epead_a16w_32s	Alpha particles; six channels; one look direction; 32 second values.	
+epead_e1ew_4s	Electrons; one channel; two look directions; 4 second values.	
+epead_e2ew_16s	Electrons; one channel; two look directions; 16 second values.	
+epead_e3ew_16s	Electrons; one channel; two look directions; 16 second values.	
+epead_p1ew_8s	Protons; one channel; two look direction; 8 second values.	
+epead_p27e_32s	Protons; six channels; one look direction; 32 second values.	
+epead_p27w_32s	Protons; six channels; one look direction; 32 second values.	
+
+X-Ray Sensor (XRS)
+xrs_1m	X-rays; two channels; one minute averages.	
+xrs_2s	X-rays; two channels; two second averages.	
+
+Extreme ultraviolet (EUV)
+euv_1m	EUV; channel B; C; D; E; one minute averages.	
+euv_a_1m	EUV; channel A; one minute averages.	
+euv_a_10s	EUV; channel A; 10 second values.	
+euv_b_10s	EUV; channel B; 10 second values.	
+euv_c_10s	EUV; channel C; 10 second values.	
+euv_d_10s	EUV; channel D; 10 second values.	
+euv_e_10s	EUV; channel E; 10 second values.	
+
+High Energy Proton Alpha detector (HEPAD)
+hepad_ap_1m	Alpha particles and protons; six channels; one minute averages.	
+hepad_ap_5m	Alpha particles and protons; six channels; five minute averages.	
+hepad_s15_1m	Alpha particles and protons; five channels; one minute averages.	
+hepad_s15_5m	Alpha particles and protons; five channels; five minute averages.	
+hepad_ap_32s	Alpha particles and protons; three channels each; 32 second values.	
+hepad_s15_4s	Alpha particles and protons; five channels; 4 second values.	
+
+Magnetometer
+magneto_1m	Magnetic field vector; one minute averages.	
+magneto_512ms	Magnetic field vector; .512 second values.	
+
+Magnetospheric Electron Detector (MAGED)
+maged_19me15_1m	Electrons; five channels; nine look directions; one minute averages.	
+maged_19me15_5m	Electrons; five channels; nine look directions; five minute averages.	
+maged_19me1_2s	Electrons; one channel; nine look directions; 2 second values.	
+maged_19me2_2s	Electrons; one channel; nine look directions; 2 second values.	
+maged_19me3_4s	Electrons; one channel; nine look directions; 4 second values.	
+maged_19me4_16s	Electrons; one channel; nine look directions; 16 second values.	
+maged_19me5_32s	Electrons; one channel; nine look directions; 32 second values.	
+
+Magnetospheric Proton Detector (MAGPD)
+magpd_19mp15_1m	Protons; five channels; nine look directions; one minute averages.	
+magpd_19mp15_5m	Protons; five channels; nine look directions; five minute averages.	
+magpd_19mp1_16s	Protons; one channel; nine look directions; 16 second values.	
+magpd_19mp2_16s	Protons; one channel; nine look directions; 16 second values.	
+magpd_19mp3_16s	Protons; one channel; nine look directions; 16 second values.	
+magpd_19mp4_32s	Protons; one channel; nine look directions; 32 second values.	
+magpd_19mp5_32s	Protons; one channel; nine look directions; 32 second values.	
+
+GOES14
+
+Electron Proton Alpha detector (EPEAD)
+epead_a16ew_1m	Alpha particles; six channels; two look directions; one minute averages.	
+epead_a16ew_5m	Alpha particles; six channels; two look directions; five minute averages.	
+epead_cpflux_5m	Protons; corrected integral flux; five minute averages.	
+epead_e13ew_1m	Electrons; three channels; two look directions; one minute averages.	
+epead_e13ew_5m	Electrons; three channels; two look directions; five minute averages.	
+epead_p17ew_1m	Protons; three channels; two look directions; five minute averages.	
+epead_p17ew_5m	Protons; three channels; two look directions; five minute averages.	
+epead_a16e_32s	Alpha particles; six channels; one look direction; 32 second values.	
+epead_a16w_32s	Alpha particles; six channels; one look direction; 32 second values.	
+epead_e1ew_4s	Electrons; one channel; two look directions; 4 second values.	
+epead_e2ew_16s	Electrons; one channel; two look directions; 16 second values.	
+epead_e3ew_16s	Electrons; one channel; two look directions; 16 second values.	
+epead_p1ew_8s	Protons; one channel; two look direction; 8 second values.	
+epead_p27e_32s	Protons; six channels; one look direction; 32 second values.	
+epead_p27w_32s	Protons; six channels; one look direction; 32 second values.	
+
+X-Ray Sensor (XRS)
+xrs_1m	X-rays; two channels; one minute averages.	
+xrs_2s	X-rays; two channels; two second averages.	
+
+Extreme ultraviolet (EUV)
+euv_1m	EUV; channel B; C; D; E; one minute averages.	
+euv_a_1m	EUV; channel A; one minute averages.	
+euv_a_10s	EUV; channel A; 10 second values.	
+euv_b_10s	EUV; channel B; 10 second values.	
+euv_c_10s	EUV; channel C; 10 second values.	
+euv_d_10s	EUV; channel D; 10 second values.	
+euv_e_10s	EUV; channel E; 10 second values.	
+
+High Energy Proton Alpha detector (HEPAD)
+hepad_ap_1m	Alpha particles and protons; six channels; one minute averages.	
+hepad_ap_5m	Alpha particles and protons; six channels; five minute averages.	
+hepad_s15_1m	Alpha particles and protons; five channels; one minute averages.	
+hepad_s15_5m	Alpha particles and protons; five channels; five minute averages.	
+hepad_ap_32s	Alpha particles and protons; three channels each; 32 second values.	
+hepad_s15_4s	Alpha particles and protons; five channels; 4 second values.	
+
+Magnetometer
+magneto_1m	Magnetic field vector; one minute averages.	
+magneto_512ms	Magnetic field vector; .512 second values.	
+
+Magnetospheric Electron Detector (MAGED)
+maged_19me15_1m	Electrons; five channels; nine look directions; one minute averages.	
+maged_19me15_5m	Electrons; five channels; nine look directions; five minute averages.	
+maged_19me1_2s	Electrons; one channel; nine look directions; 2 second values.	
+maged_19me2_2s	Electrons; one channel; nine look directions; 2 second values.	
+maged_19me3_4s	Electrons; one channel; nine look directions; 4 second values.	
+maged_19me4_16s	Electrons; one channel; nine look directions; 16 second values.	
+maged_19me5_32s	Electrons; one channel; nine look directions; 32 second values.	
+
+Magnetospheric Proton Detector (MAGPD)
+magpd_19mp15_1m	Protons; five channels; nine look directions; one minute averages.	
+magpd_19mp15_5m	Protons; five channels; nine look directions; five minute averages.	
+magpd_19mp1_16s	Protons; one channel; nine look directions; 16 second values.	
+magpd_19mp2_16s	Protons; one channel; nine look directions; 16 second values.	
+magpd_19mp3_16s	Protons; one channel; nine look directions; 16 second values.	
+magpd_19mp4_32s	Protons; one channel; nine look directions; 32 second values.	
+magpd_19mp5_32s	Protons; one channel; nine look directions; 32 second values.	
+
+GOES15
+
+Electron Proton Alpha detector (EPEAD)
+epead_a16ew_1m	Alpha particles; six channels; two look directions; one minute averages.	
+epead_a16ew_5m	Alpha particles; six channels; two look directions; five minute averages.	
+epead_cpflux_5m	Protons; corrected integral flux; five minute averages.	
+epead_e13ew_1m	Electrons; three channels; two look directions; one minute averages.	
+epead_e13ew_5m	Electrons; three channels; two look directions; five minute averages.	
+epead_p17ew_1m	Protons; three channels; two look directions; five minute averages.	
+epead_p17ew_5m	Protons; three channels; two look directions; five minute averages.	
+epead_a16e_32s	Alpha particles; six channels; one look direction; 32 second values.	
+epead_a16w_32s	Alpha particles; six channels; one look direction; 32 second values.	
+epead_e1ew_4s	Electrons; one channel; two look directions; 4 second values.	
+epead_e2ew_16s	Electrons; one channel; two look directions; 16 second values.	
+epead_e3ew_16s	Electrons; one channel; two look directions; 16 second values.	
+epead_p1ew_8s	Protons; one channel; two look direction; 8 second values.	
+epead_p27e_32s	Protons; six channels; one look direction; 32 second values.	
+epead_p27w_32s	Protons; six channels; one look direction; 32 second values.	
+
+X-Ray Sensor (XRS)
+xrs_1m	X-rays; two channels; one minute averages.	
+xrs_2s	X-rays; two channels; two second averages.	
+
+Extreme ultraviolet (EUV)
+euv_1m	EUV; channel B; C; D; E; one minute averages.	
+euv_a_1m	EUV; channel A; one minute averages.	
+euv_a_10s	EUV; channel A; 10 second values.	
+euv_b_10s	EUV; channel B; 10 second values.	
+euv_c_10s	EUV; channel C; 10 second values.	
+euv_d_10s	EUV; channel D; 10 second values.	
+euv_e_10s	EUV; channel E; 10 second values.	
+
+High Energy Proton Alpha detector (HEPAD)
+hepad_ap_1m	Alpha particles and protons; six channels; one minute averages.	
+hepad_ap_5m	Alpha particles and protons; six channels; five minute averages.	
+hepad_s15_1m	Alpha particles and protons; five channels; one minute averages.	
+hepad_s15_5m	Alpha particles and protons; five channels; five minute averages.	
+hepad_ap_32s	Alpha particles and protons; three channels each; 32 second values.	
+hepad_s15_4s	Alpha particles and protons; five channels; 4 second values.	
+
+Magnetometer
+magneto_1m	Magnetic field vector; one minute averages.	
+magneto_512ms	Magnetic field vector; .512 second values.	
+
+Magnetospheric Electron Detector (MAGED)
+maged_19me15_1m	Electrons; five channels; nine look directions; one minute averages.	
+maged_19me15_5m	Electrons; five channels; nine look directions; five minute averages.	
+maged_19me1_2s	Electrons; one channel; nine look directions; 2 second values.	
+maged_19me2_2s	Electrons; one channel; nine look directions; 2 second values.	
+maged_19me3_4s	Electrons; one channel; nine look directions; 4 second values.	
+maged_19me4_16s	Electrons; one channel; nine look directions; 16 second values.	
+maged_19me5_32s	Electrons; one channel; nine look directions; 32 second values.	
+
+Magnetospheric Proton Detector (MAGPD)
+magpd_19mp15_1m	Protons; five channels; nine look directions; one minute averages.	
+magpd_19mp15_5m	Protons; five channels; nine look directions; five minute averages.	
+magpd_19mp1_16s	Protons; one channel; nine look directions; 16 second values.	
+magpd_19mp2_16s	Protons; one channel; nine look directions; 16 second values.	
+magpd_19mp3_16s	Protons; one channel; nine look directions; 16 second values.	
+magpd_19mp4_32s	Protons; one channel; nine look directions; 32 second values.	
+magpd_19mp5_32s	Protons; one channel; nine look directions; 32 second values.	

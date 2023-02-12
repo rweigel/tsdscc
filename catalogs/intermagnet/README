@@ -1,0 +1,53 @@
+
+# Usage:
+#  	make updates   # to update list of available files, download new files, and update and TSML
+# 	make metadatas # to update TSML (if only metadata.js is changed)
+#       make catalogs  # to update list of available files
+#
+# TODO:
+#       Need to try mirror several times - sometimes files that are said to exist in metadata are not 
+#       successfully downloaded first time. Find out why.
+#
+# Notes:
+# 	This catalog must be mirrored because API creates a temporary file
+# 	that is based on the timestamp (down to the second) of the request.
+# 	If two requests are made in the same second, the first temporary
+# 	file is over-written on their server.  Note: FTP access is
+# 	available, obviating scraping (mirror.js):
+# 	http://intermagnet.org/data-donnee/data-eng.php#conditions Request
+# 	for FTP access sent on 9/27/2014.
+#
+# 	This does variation data only. Options:
+# 	variation: vmin.min
+# 	provisional: pmin.min
+# 	quasi-definitive: qmin.min
+# 	definitive: dmin.min
+#
+# 	metadata.js reads catalog_CADENCE.txt (created by catalog.js) to get list of stations.
+# 	metadata.js writes node in XML for station if data file for that station is found.  The start/stop
+#       date are derived from files found on disk.
+#
+# 	See also
+# 	http://catalog.data.gov/dataset/intermagnet-definitive-observatory-data/resource/b2bf98db-e05d-499f-9e2d-0b3ef1a05d73
+# 	ftp://ftp.ngdc.noaa.gov/wdc/geomagnetism/
+# 	ftp://ftp.ngdc.noaa.gov/wdc/geomagnetism/data/observatories/definitive/
+
+Create catalog_PT1{M,S}.txt, containing list of
+available stations and start/stop times of data for station.
+Note that catalog.js assumes earliest available data is in 1999.
+ 
+ make catalogs 
+or
+ make catalog CADENCE=PT1M 
+ make catalog CADENCE=PT1S 
+
+Mirror all station data from stations listed in catalog_PT1{M,S}.txt
+
+ make mirrors
+or
+ make mirror CADENCE=PT1M
+ make mirror CADENCE=PT1S
+
+After full mirror, delete datacache cache.
+
+

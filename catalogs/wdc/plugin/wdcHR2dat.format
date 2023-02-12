@@ -1,0 +1,153 @@
+<html>
+
+<head><title>WDC format</title></head>
+
+<body>
+
+<hr width=75%>
+<center><font size=5 color=blue>DIGITAL WDC  OBSERVATORY EXCHANGE FORMAT</font>
+<hr width=75%>
+<p>
+<font size=4 color=red>HOURLY VALUES</font></center>
+<pre>        
+COLUMNS  FMT DESCRIPTION
+        
+    1-3   A3 OBSERVATORY 3-LETTER CODE, left adjused
+    4-5   I2 YEAR (last 2 digits, 82 = 1982)
+    6-7   I2 MONTH (01-12)
+      8   A1 ELEMENT(D,H,X,Y,Z,or F)
+   9-10   I2 DAY OF MONTH (01-31)
+  11-12   A2 Blanks
+  13-14   A2 Arbitrary
+     15   A1 INTERNATIONAL QUIET or DISTURBED DAYS,
+             Q=1,D=2
+     16   I1 Blank for data since 1900,8 for data before
+  17-20   I4 Tabular base, in degrees for D and I, hundreds of nanoTeslas
+             (gammas) for the intensity elements. The bases are right adjusted
+             and signed if negative. Negative values are identified with a
+             minus sign either adjacent to the first significant digit or in
+             the high-order position of the field (position 17).  NOTE: A blank
+             digit will not appear between a (-) sign and the first significant
+             digit. For example, a base may appear as -050 or b-50 but not as
+             -b50(b=blank).
+ 21-116 24I4 Twenty-four 4-digit Hourly Values for the day. The values are in
+             tenth-minutes for D and in nanoTeslas (gammas) for the intensity
+             elements. The first hourly value represents the mean value between
+             00:00 UT and 01:00 UT, ..., the 24th value represents the mean
+             between 23:00 UT and 24:00 UT. Rules for negative values are
+             the same as those described for tabular bases. A missing value is
+             identified by 9999.
+117-120   I4 Daily Mean. Rules for negative values are the same as those     
+             described for tabular bases. If any of the hourly mean values for
+             the day are missing 9999 will appear as the daily mean.
+               
+The 25 values in positions 21-120 will have the range -999 to 9998, with 9999
+reserved for missing values. To avoid a 4-digit negative value in positions
+21-116, the tabular base will be adjusted for that day; for example for D, one
+degree is subtracted from the base and 600 units are added to each of the
+hourly values for the day - for the intensity elements, 500 nT are subtracted
+from the base and 500 nT are added to each of the hourly values for the day.
+Each tape block contains 20 records (2400 characters).  A standard inter-record
+gap appears between tape blocks. When necessary, all nines are used as padding
+to complete the last block of data. Two or more tape marks follow the last
+block of data. The records are sorted according to observatory code, year,
+month, element, day (positions 1-10).
+</pre>
+<hr width=75%>
+<p>
+<center><font size=4 color=red>1-MIN VALUES</font></center>
+<pre>
+      The logical record length is 400 coded characters containing header
+        information, blank spaces, and data for one element for one hour. 
+
+      Each logical record contains header information and data in the 
+        following format: 
+
+   *********************************************************************
+
+
+   Characters:	  1 -   6   Geographic Co-Latitude in 0.001 degree
+		  7 -  12   East Geographic Longitude in 0.001 degree
+		 13 -  14   Year      (98)
+		 15 -  16   Month   (01 - 12)
+		 17 -  18   Day     (01 - 31)
+		   19       Component of the field (H,E,Z)
+		 20 -  21   Hour    (00 - 23)
+		 22 -  24   Observatory's IAGA 3-letter code
+                   25       Origin of data (D - digital, A - digitized)
+		 26 -  34   Future Use (NOT USED HERE)
+		 35 -  40   1-st 1 minute average
+		 41 -  46   2-nd 1 minute average
+		   ...          ...      .....
+		388 - 394   60-th 1 minute average 
+                394 - 400   Hourly mean value
+
+   FORTRAN format statement would look like:
+
+	     <b>format (2i6,2i2,a1,i2,a3,a1,9a1,61(i6))</b>
+
+*********************************************************************
+
+
+  Comments:
+
+        DATA-1 ... DATA-60 are 1-minute values of the given element for that
+        hour. H, X, Y, Z, or F are given to the nearest nanoTesla (gamma). D is
+        given to the nearest tenth-minute of arc (612 = l degree + 01.2 minutes
+        East). Each value is in a 6-character field.
+
+       Missing data spaces are padded with 99999. No alteration of logical
+        record length is required for different types of computers.
+
+
+        Codes for sources of digital magnetometer data in the WDC system not
+        only indicate the source organization, but also show whether the data 
+        are average values or point data. For example, 1-minute point values 
+        scaled from analog magnetograms for the production of AE indices are 
+        coded with a "D" because they are "digitized".  Typically, digital 
+        1-minute values received by WDCs from organizations operating automatic
+        magnetic observatory instruments are averages of more frequendy sampled
+        values, e.g. 10-second point samples. Different organizations process
+        their higher time resolution observations in different ways. Some may
+        filter and smooth the observations. Some follow the practice recom-
+        mended by IAGA of averaging higher time resolution samples from
+        before and after the minute to obtain a 1-minute value centered 
+        exactly on the minute. Others average values from the beginning of a 
+        given minute to the beginning of the next minute, effectively centering
+        the mean on the half-minute, in similar fashion to the processing of 
+        1-minute values to obtain hourly means. If the method used to obtain 
+        1-minute average values is important to a user, the WDC will assist in 
+        determining the exact procedure applied.
+
+        In general, digital values from national networks are "absolute" and 
+        are tied to baselines determined by are operating institutions. Often 
+        only timely variations data are needed to support special research 
+        campaigns and digital values may be transmitted from regular 
+        observatory sites via satellite relay platforms. Such values are 
+        "flagged" with a "V" as noted below and eventually are replaced by the
+        standard digital observatory output. Values from special networks such 
+        as the IMS chains are variations only.  Attempts are made to check the 
+        absolute output of these instruments but usually no systematic absolute
+        observations are possible or they are later replaced by adopted 
+        standard observatory digital values.
+
+  ORG    (data origin codes)
+
+     A =    Alaskan meridian magnetometer chain (includes Canadian sites) for
+            lMS
+     C =    Canadian standard observatory network
+     O =    point samples digitized from analog magnetograms
+     F =    France
+     G =    USGS standard observatory network (one station operated by NOAA)
+     J =    Japan
+     K =    US AFGL E-W sub-auroral zone magnetometer chain
+     R =    Western Canadian meridian magnetometer chain operated for IMS
+     T =    Lungping magnetic observatory, Taiwan.
+     U =    E-W mid-latitude magnetometer chain operated for IMS
+     V =    Variations only sent via NOAA GOES satellite relay
+     W =    Eastern Canadian meridian magnetometer chain operated for IMS
+<pre>
+<hr>
+</body>
+</html>
+

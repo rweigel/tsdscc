@@ -1,0 +1,8 @@
+{
+  "name": "DAS2",
+  "version": "0.1.0",
+  "dependencies": {
+    "request": "*",
+    "xml2js": "*"
+  }
+}

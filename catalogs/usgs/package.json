@@ -1,0 +1,10 @@
+{
+  "name": "OPTNAPI",
+  "version": "0.1.0",
+  "dependencies": {
+    "request": "*",
+    "crypto": "*",
+    "xml2js": "*",
+    "jsdom": "3.*"
+  }
+}
